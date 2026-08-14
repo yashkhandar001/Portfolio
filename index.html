@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="style.css?v=3.0.0">
+  <link rel="stylesheet" href="style.css?v=3.1.0">
 </head>
 <body>
   <!-- Ambient background glow spots -->
@@ -467,7 +467,7 @@ yash = StudentEngineer()</code></pre>
         </div>
 
         <!-- Filter tabs & Search Bar for Internships -->
-        <div class="internships-filter-bar-wrapper" style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:12px; margin-bottom:20px;">
+        <div class="internships-filter-bar-wrapper">
           <div class="internships-filter-bar" role="tablist">
             <button class="intern-tab active" data-filter="all">All Openings (<span id="tab-count-all">12</span>)</button>
             <button class="intern-tab" data-filter="aiml">AI / ML &amp; NLP</button>
@@ -476,8 +476,8 @@ yash = StudentEngineer()</code></pre>
             <button class="intern-tab" data-filter="java">Java &amp; Software Dev</button>
             <button class="intern-tab" data-filter="web">Web Development</button>
           </div>
-          <div class="internship-search-box" style="position:relative; min-width:240px; flex:1; max-width:320px;">
-            <input type="text" id="internship-search-input" placeholder="🔍 Search company, skill, city..." style="width:100%; padding:8px 14px; background:rgba(255,255,255,0.05); border:1px solid var(--border-glow); border-radius:var(--radius-sm); color:var(--text-main); font-size:0.85rem; outline:none; transition:border-color 0.2s;" />
+          <div class="internship-search-box">
+            <input type="text" id="internship-search-input" placeholder="🔍 Search company, skill, city..." />
           </div>
         </div>
 

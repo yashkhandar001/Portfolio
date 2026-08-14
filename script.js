@@ -640,14 +640,17 @@ class ParticleCanvas {
     if (!this.canvas) return;
     this.ctx = this.canvas.getContext('2d');
     this.particles = [];
-    this.maxParticles = 60;
-    this.mouse = { x: null, y: null, radius: 140 };
+    this.maxParticles = window.innerWidth < 768 ? 28 : 60;
+    this.mouse = { x: null, y: null, radius: window.innerWidth < 768 ? 90 : 140 };
     this.init();
   }
 
   init() {
     this.resize();
-    window.addEventListener('resize', () => this.resize());
+    window.addEventListener('resize', () => {
+      this.resize();
+      this.createParticles();
+    });
     
     window.addEventListener('mousemove', (e) => {
       this.mouse.x = e.clientX;
@@ -659,6 +662,26 @@ class ParticleCanvas {
       this.mouse.y = null;
     });
 
+    // Touch Support for Mobile / Tablet Devices
+    window.addEventListener('touchstart', (e) => {
+      if (e.touches.length > 0) {
+        this.mouse.x = e.touches[0].clientX;
+        this.mouse.y = e.touches[0].clientY;
+      }
+    }, { passive: true });
+
+    window.addEventListener('touchmove', (e) => {
+      if (e.touches.length > 0) {
+        this.mouse.x = e.touches[0].clientX;
+        this.mouse.y = e.touches[0].clientY;
+      }
+    }, { passive: true });
+
+    window.addEventListener('touchend', () => {
+      this.mouse.x = null;
+      this.mouse.y = null;
+    }, { passive: true });
+
     this.createParticles();
     this.animate();
   }
@@ -666,6 +689,8 @@ class ParticleCanvas {
   resize() {
     this.width = this.canvas.width = window.innerWidth;
     this.height = this.canvas.height = window.innerHeight;
+    this.maxParticles = window.innerWidth < 768 ? 28 : 60;
+    this.mouse.radius = window.innerWidth < 768 ? 90 : 140;
   }
 
   createParticles() {
@@ -1831,17 +1856,49 @@ function initNavigation() {
   // Mobile drawer toggle
   const mobileToggle = document.getElementById('mobile-menu-toggle');
   const mobileDrawer = document.getElementById('mobile-nav-drawer');
+  const mobileResumeBtn = document.getElementById('mobile-resume-btn');
+
+  const closeMobileNav = () => {
+    if (mobileDrawer && mobileToggle) {
+      mobileDrawer.classList.remove('open');
+      mobileToggle.classList.remove('active');
+      mobileToggle.setAttribute('aria-expanded', 'false');
+    }
+  };
 
   if (mobileToggle && mobileDrawer) {
-    mobileToggle.addEventListener('click', () => {
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       synth.playClick();
-      mobileDrawer.classList.toggle('open');
+      const isOpen = mobileDrawer.classList.toggle('open');
+      mobileToggle.classList.toggle('active', isOpen);
+      mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 
     document.querySelectorAll('.mobile-nav-link').forEach(link => {
       link.addEventListener('click', () => {
-        mobileDrawer.classList.remove('open');
+        closeMobileNav();
       });
+    });
+
+    if (mobileResumeBtn) {
+      mobileResumeBtn.addEventListener('click', () => {
+        closeMobileNav();
+      });
+    }
+
+    // Auto-close on click outside
+    document.addEventListener('click', (e) => {
+      if (!mobileDrawer.contains(e.target) && !mobileToggle.contains(e.target) && mobileDrawer.classList.contains('open')) {
+        closeMobileNav();
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileDrawer.classList.contains('open')) {
+        closeMobileNav();
+      }
     });
   }
 

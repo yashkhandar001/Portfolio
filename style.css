@@ -623,53 +623,115 @@ ul {
 .mobile-menu-btn {
   display: none;
   flex-direction: column;
-  justify-content: space-around;
-  width: 38px;
-  height: 38px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
   background: var(--bg-card);
   border: 1px solid var(--border-glass);
-  border-radius: var(--radius-sm);
-  padding: 9px 8px;
+  border-radius: var(--radius-md);
+  padding: 0;
   cursor: pointer;
+  transition: all var(--transition-fast);
+  z-index: 105;
+  touch-action: manipulation;
+}
+
+.mobile-menu-btn:hover,
+.mobile-menu-btn:focus-visible {
+  border-color: var(--accent-color);
+  background: var(--bg-glass-hover);
 }
 
 .mobile-menu-btn .bar {
-  width: 100%;
+  width: 20px;
   height: 2px;
   background: var(--text-main);
   border-radius: 2px;
-  transition: all var(--transition-smooth);
+  transition: transform var(--transition-smooth), opacity var(--transition-smooth), background-color var(--transition-smooth);
+  transform-origin: center;
 }
 
+.mobile-menu-btn.active .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  background: var(--accent-light);
+}
+
+.mobile-menu-btn.active .bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.mobile-menu-btn.active .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  background: var(--accent-light);
+}
+
+/* Mobile Nav Drawer */
 .mobile-nav-drawer {
-  display: none;
-  position: absolute;
+  position: fixed;
   top: var(--header-height);
   left: 0;
+  right: 0;
   width: 100%;
   background: var(--bg-glass);
-  backdrop-filter: blur(24px);
-  border-bottom: 1px solid var(--border-glass);
-  padding: 24px;
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border-bottom: 1px solid var(--border-glass-hover);
+  padding: 20px 18px 26px;
   box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-16px);
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
+  z-index: 99;
+  max-height: calc(100vh - var(--header-height));
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .mobile-nav-drawer.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
   display: block;
 }
 
 .mobile-nav-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
 }
 
 .mobile-nav-link {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--text-main);
-  display: block;
-  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid transparent;
+  transition: all var(--transition-fast);
+  touch-action: manipulation;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link:active {
+  background: var(--bg-glass-hover);
+  border-color: var(--border-glow);
+  color: var(--accent-light);
+  transform: translateX(4px);
+}
+
+#mobile-resume-btn {
+  margin-top: 8px;
+  padding: 14px 20px;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 /* --- HERO SECTION --- */
@@ -2286,12 +2348,44 @@ ul {
   letter-spacing: 0.05em;
 }
 
+.internships-filter-bar-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.internship-search-box {
+  position: relative;
+  min-width: 240px;
+  flex: 1;
+  max-width: 320px;
+}
+
+#internship-search-input {
+  width: 100%;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-glow);
+  border-radius: var(--radius-sm);
+  color: var(--text-main);
+  font-size: 0.88rem;
+  outline: none;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+#internship-search-input:focus {
+  border-color: var(--accent-color);
+  background: rgba(255, 255, 255, 0.08);
+}
+
 .internships-filter-bar {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 36px;
 }
 
 .intern-tab {
@@ -2470,47 +2564,646 @@ ul {
   word-wrap: break-word;
 }
 
-/* --- RESPONSIVE MEDIA QUERIES --- */
-@media (max-width: 992px) {
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES & MOBILE OPTIMIZATIONS
+   ========================================================================== */
+
+/* --- TABLETS & MEDIUM SCREENS (<= 1024px) --- */
+@media (max-width: 1024px) {
+  :root {
+    --header-height: 68px;
+  }
+
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
   .about-grid {
     grid-template-columns: 1fr;
+    gap: 28px;
   }
+
   .contact-grid {
     grid-template-columns: 1fr;
+    gap: 32px;
   }
+
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 32px;
   }
+
   .scout-stats-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   }
 }
 
+/* --- SMARTPHONES & SMALL TABLETS (<= 768px) --- */
 @media (max-width: 768px) {
+  /* Layout & Spacing */
+  .section {
+    padding: 64px 0;
+  }
+
+  .section-container {
+    padding: 0 16px;
+  }
+
+  .section-header {
+    margin-bottom: 36px;
+  }
+
+  .section-title {
+    font-size: clamp(1.75rem, 5.5vw, 2.35rem);
+    margin-bottom: 10px;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  /* Header & Mobile Nav */
   .desktop-nav {
     display: none;
   }
+
   .mobile-menu-btn {
     display: flex;
   }
+
+  .header-container {
+    padding: 0 16px;
+  }
+
+  .header-actions {
+    gap: 8px;
+  }
+
+  .icon-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .accent-palette {
+    right: -10px;
+    width: 180px;
+  }
+
+  /* Hide header resume button on mobile so bar doesn't overflow */
+  #btn-open-resume {
+    display: none;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 90px 0 50px;
+    min-height: auto;
+  }
+
   .hero-title {
-    font-size: 2.5rem;
+    font-size: clamp(2.1rem, 7.5vw, 3.2rem);
+    margin-bottom: 12px;
   }
-  .about-services-grid {
-    grid-template-columns: 1fr;
+
+  .hero-greeting {
+    font-size: 0.5em;
   }
+
+  .typewriter-container {
+    font-size: 1.05rem;
+    min-height: 2.8em;
+  }
+
+  .hero-bio {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .hero-social-bar {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .social-chip {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .hero-code-card {
+    padding: 16px;
+  }
+
+  .code-preview {
+    font-size: 0.76rem;
+    padding: 12px;
+    overflow-x: auto;
+  }
+
   .hero-metrics-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding-top: 14px;
+  }
+
+  .metric-number {
+    font-size: 1.25rem;
+  }
+
+  /* About Section */
+  .about-card-bio {
+    padding: 24px 20px;
+  }
+
+  .about-card-title {
+    font-size: 1.3rem;
+  }
+
+  .about-services-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .service-card {
+    padding: 20px;
+  }
+
+  /* Skills Section */
+  .skills-filter-bar {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+    margin-bottom: 24px;
+    scrollbar-width: none;
+  }
+
+  .skills-filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-tab {
+    flex-shrink: 0;
+    padding: 8px 16px;
+    font-size: 0.82rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+  }
+
+  .skill-card {
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .skill-badge-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 1.1rem;
+  }
+
+  .skill-name {
+    font-size: 0.95rem;
+  }
+
+  .skill-tag-pills {
+    display: none;
+  }
+
+  /* Projects Section */
+  .projects-filter-bar {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+    margin-bottom: 24px;
+    scrollbar-width: none;
+  }
+
+  .projects-filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .proj-tab {
+    flex-shrink: 0;
+    padding: 8px 16px;
+    font-size: 0.84rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-card {
+    padding: 22px 18px;
+  }
+
+  /* Flagship LEGACY Card Mobile Styling */
+  .flagship-hud-card {
+    padding: 20px 16px;
+  }
+
+  .flagship-hud-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .flagship-hud-metrics {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .flagship-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .flagship-actions .btn {
+    width: 100%;
+  }
+
+  /* AI Internship Scout */
+  .scout-dashboard-card {
+    padding: 20px 16px;
+    margin-bottom: 24px;
+  }
+
+  .scout-status-row {
+    flex-direction: column;
+    align-items: stretch;
     gap: 16px;
   }
+
+  .scout-agent-info {
+    gap: 12px;
+  }
+
+  .agent-avatar {
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
+  }
+
+  .agent-name {
+    font-size: 1.1rem;
+  }
+
+  .scout-actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .scout-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .scout-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .scout-stat-box {
+    padding: 10px 8px;
+  }
+
+  .scout-stat-val {
+    font-size: 1.2rem;
+  }
+
+  .internships-filter-bar-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .internships-filter-bar {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+    margin-bottom: 0;
+    scrollbar-width: none;
+    width: 100%;
+  }
+
+  .internships-filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .intern-tab {
+    flex-shrink: 0;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+  }
+
+  .internship-search-box {
+    width: 100%;
+    max-width: 100% !important;
+  }
+
+  .internships-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .internship-card {
+    padding: 18px 16px;
+  }
+
+  /* Experience Timeline */
+  .timeline-wrapper {
+    max-width: 100%;
+  }
+
+  .timeline-line {
+    left: 12px;
+  }
+
+  .timeline-item {
+    padding-left: 38px;
+    margin-bottom: 28px;
+  }
+
+  .timeline-dot {
+    left: 4px;
+    top: 20px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .dot-inner {
+    width: 5px;
+    height: 5px;
+  }
+
+  .timeline-card {
+    padding: 20px 16px;
+  }
+
+  .timeline-role {
+    font-size: 1.1rem;
+  }
+
+  .timeline-company {
+    font-size: 0.88rem;
+    margin-bottom: 10px;
+  }
+
+  /* CLI Terminal */
+  .terminal-container {
+    border-radius: var(--radius-md);
+  }
+
+  .terminal-bar {
+    padding: 10px 14px;
+  }
+
+  .terminal-title {
+    font-size: 0.76rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .terminal-quick-chips {
+    padding: 10px 14px;
+    gap: 6px;
+  }
+
+  .cmd-chip {
+    font-size: 0.72rem;
+    padding: 4px 8px;
+  }
+
+  .terminal-body {
+    padding: 14px;
+    min-height: 180px;
+    max-height: 320px;
+    font-size: 0.8rem;
+  }
+
+  .terminal-input-row {
+    padding: 10px 14px;
+    gap: 8px;
+  }
+
+  .term-prompt {
+    font-size: 0.8rem;
+  }
+
+  .term-input {
+    font-size: 16px; /* Prevents iOS Safari auto-zoom */
+  }
+
+  .term-submit-btn {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+
+  /* Contact Section */
+  .contact-info-card {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .contact-card-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .contact-card-val {
+    font-size: 0.88rem;
+    word-break: break-word;
+  }
+
+  .contact-form-card {
+    padding: 24px 18px;
+  }
+
   .form-row {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
+
+  .form-input,
+  .form-textarea {
+    font-size: 16px; /* Prevents iOS Safari auto-zoom */
+    padding: 12px 14px;
+  }
+
+  /* Footer */
   .footer-grid {
     grid-template-columns: 1fr;
+    gap: 28px;
+    text-align: center;
+  }
+
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-bottom-flex {
+    flex-direction: column-reverse;
+    gap: 14px;
+    text-align: center;
+  }
+
+  /* Custom Modals (<dialog>) */
+  .custom-modal .modal-box {
+    width: min(94vw, 680px);
+    max-height: 90vh;
+    padding: 20px 16px;
+    margin: auto;
+  }
+
+  .modal-title {
+    font-size: 1.35rem;
+  }
+
+  .modal-banner {
+    height: 100px;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 14px;
+  }
+
+  .modal-actions .btn {
+    width: 100%;
+  }
+
+  /* Application Packet Modal */
+  .packet-tabs {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .packet-tab-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .packet-content-box {
+    padding: 14px;
+    max-height: 280px;
+  }
+
+  .packet-text-content {
+    font-size: 0.78rem;
+  }
+
+  /* Resume Paper */
+  .resume-paper {
+    padding: 20px 16px;
+    font-size: 0.84rem;
+  }
+
+  .r-name {
+    font-size: 1.4rem;
+  }
+
+  .r-exp-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  /* Toasts */
+  .toast-container {
+    left: 16px;
+    right: 16px;
+    bottom: 20px;
+  }
+
+  .toast {
+    min-width: unset;
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+/* --- ULTRA-COMPACT MOBILE SCREENS (<= 480px) --- */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: clamp(1.9rem, 8.5vw, 2.5rem);
+  }
+
+  .brand-logo {
+    font-size: 1.1rem;
+  }
+
+  .status-badge {
+    padding: 4px 10px;
+  }
+
+  .status-text {
+    font-size: 0.74rem;
+  }
+
+  .hero-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .metric-item {
+    padding: 6px 4px;
+  }
+
+  .intern-actions {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .intern-actions .btn {
+    width: 100%;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .skill-card {
+    padding: 12px 10px;
+  }
+
+  .skill-name {
+    font-size: 0.86rem;
+  }
+
+  .skill-level-pct {
+    font-size: 0.75rem;
   }
 }
