@@ -57,6 +57,7 @@ const PORTFOLIO_DATA = {
         "Developing smart system-level automations, reminder dispatchers, and conversational intelligence."
       ]
     }
+  ],
   internships: []
 };
 
