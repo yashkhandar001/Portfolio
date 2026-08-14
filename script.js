@@ -57,472 +57,8 @@ const PORTFOLIO_DATA = {
         "Developing smart system-level automations, reminder dispatchers, and conversational intelligence."
       ]
     }
-  ],
-  internships: []
+  ]
 };
-
-// ==========================================
-// MASTER DYNAMIC INTERNSHIP REPOSITORY (36+ LIVE ROLES)
-// ==========================================
-const MASTER_INTERNSHIP_POOL = [
-  // BATCH A: AI/ML & Conversational Systems
-  {
-    id: "INT-01",
-    role: "AI / Machine Learning Intern",
-    company: "Cognitive AI Labs",
-    location: "Mumbai (Hybrid)",
-    stipend: "₹18,000 - ₹25,000 / mo",
-    duration: "3 - 6 Months",
-    category: "aiml",
-    requirements: ["Python", "Pandas", "NumPy", "Scikit-Learn", "DSA"],
-    applyUrl: "https://linkedin.com/jobs",
-    portal: "LinkedIn Direct",
-    matchScore: 98,
-    postedAgo: "1h ago"
-  },
-  {
-    id: "INT-02",
-    role: "Conversational AI & NLP Intern (LEGACY Domain)",
-    company: "BharatAI Voice Systems",
-    location: "Remote (India)",
-    stipend: "₹22,000 - ₹30,000 / mo",
-    duration: "4 - 6 Months",
-    category: "aiml",
-    requirements: ["Python", "AI/ML Libraries", "NLP Basics", "Speech APIs", "OOP"],
-    applyUrl: "https://wellfound.com",
-    portal: "Wellfound (AngelList)",
-    matchScore: 99,
-    postedAgo: "30m ago"
-  },
-  {
-    id: "INT-03",
-    role: "Student Research Intern (Machine Intelligence)",
-    company: "TCS Research & Innovation",
-    location: "Mumbai / Pune",
-    stipend: "₹20,000 / mo",
-    duration: "3 Months",
-    category: "aiml",
-    requirements: ["Python", "C++", "DSA", "Machine Learning Basics", "NumPy"],
-    applyUrl: "https://tcs.com/careers",
-    portal: "TCS NextStep",
-    matchScore: 95,
-    postedAgo: "2h ago"
-  },
-  {
-    id: "INT-04",
-    role: "Python Backend & Automation Intern",
-    company: "Reliance Jio AI CoE",
-    location: "Navi Mumbai, MH",
-    stipend: "₹25,000 / mo",
-    duration: "6 Months",
-    category: "python",
-    requirements: ["Python", "OOP", "Data Structures", "REST APIs", "Git"],
-    applyUrl: "https://careers.jio.com",
-    portal: "Jio Careers",
-    matchScore: 96,
-    postedAgo: "3h ago"
-  },
-  {
-    id: "INT-05",
-    role: "Core Software Engineering Intern (C++ & DSA)",
-    company: "Aether Dynamics",
-    location: "Bengaluru / Remote",
-    stipend: "₹25,000 - ₹35,000 / mo",
-    duration: "4 Months",
-    category: "dsa",
-    requirements: ["C++", "C", "Data Structures", "Algorithms", "OOP"],
-    applyUrl: "https://unstop.com",
-    portal: "Unstop",
-    matchScore: 96,
-    postedAgo: "Just now"
-  },
-  {
-    id: "INT-06",
-    role: "Junior AI & Data Analytics Intern",
-    company: "Fractal Analytics",
-    location: "Mumbai / Hybrid",
-    stipend: "₹20,000 - ₹28,000 / mo",
-    duration: "3 - 6 Months",
-    category: "aiml",
-    requirements: ["Python", "Pandas", "Matplotlib", "NumPy", "Data Preprocessing"],
-    applyUrl: "https://fractal.ai/careers",
-    portal: "Fractal Careers",
-    matchScore: 94,
-    postedAgo: "4h ago"
-  },
-  {
-    id: "INT-07",
-    role: "Java Software Development Intern",
-    company: "LTIMindtree",
-    location: "Navi Mumbai / Pune",
-    stipend: "₹18,000 / mo",
-    duration: "3 Months",
-    category: "java",
-    requirements: ["Java", "Core Java OOP", "Data Structures", "Problem Solving"],
-    applyUrl: "https://ltimindtree.com/careers",
-    portal: "LTIMindtree Careers",
-    matchScore: 93,
-    postedAgo: "1d ago"
-  },
-  {
-    id: "INT-08",
-    role: "Autonomous Agents & Python Developer Intern",
-    company: "Kreate AI Labs",
-    location: "Remote (India)",
-    stipend: "₹15,000 - ₹22,000 / mo",
-    duration: "3 Months",
-    category: "python",
-    requirements: ["Python", "AI Libraries", "Automation", "DSA Basics", "Git"],
-    applyUrl: "https://internshala.com",
-    portal: "Internshala",
-    matchScore: 97,
-    postedAgo: "5h ago"
-  },
-  {
-    id: "INT-09",
-    role: "Computer Vision & ML Intern",
-    company: "VisionTech Innovations",
-    location: "Mumbai, MH",
-    stipend: "₹18,000 - ₹26,000 / mo",
-    duration: "6 Months",
-    category: "aiml",
-    requirements: ["Python", "C++", "Scikit-Learn", "Matplotlib", "DSA"],
-    applyUrl: "https://cuvette.tech",
-    portal: "Cuvette",
-    matchScore: 95,
-    postedAgo: "2h ago"
-  },
-  {
-    id: "INT-10",
-    role: "Algorithm & Systems Software Intern",
-    company: "Nexis High-Performance Systems",
-    location: "Remote (India)",
-    stipend: "₹24,000 / mo",
-    duration: "3 - 4 Months",
-    category: "dsa",
-    requirements: ["C", "C++", "Data Structures", "Algorithms", "Linux Basics"],
-    applyUrl: "https://indeed.com",
-    portal: "Indeed",
-    matchScore: 94,
-    postedAgo: "6h ago"
-  },
-  {
-    id: "INT-11",
-    role: "Data Engineering & Analytics Intern",
-    company: "Zepto Technology Hub",
-    location: "Mumbai / Bengaluru",
-    stipend: "₹25,000 - ₹35,000 / mo",
-    duration: "6 Months",
-    category: "python",
-    requirements: ["Python", "Pandas", "NumPy", "SQL Basics", "Algorithms"],
-    applyUrl: "https://linkedin.com/jobs",
-    portal: "LinkedIn",
-    matchScore: 92,
-    postedAgo: "1h ago"
-  },
-  {
-    id: "INT-12",
-    role: "Web & Frontend Engineering Intern",
-    company: "Zenith Creative Studios",
-    location: "Remote (India)",
-    stipend: "₹12,000 - ₹18,000 / mo",
-    duration: "2 - 3 Months",
-    category: "web",
-    requirements: ["HTML", "CSS", "Responsive UI", "Web Basics", "Git"],
-    applyUrl: "https://internshala.com",
-    portal: "Internshala",
-    matchScore: 91,
-    postedAgo: "3h ago"
-  },
-
-  // BATCH B: Top Product Companies & Innovation Labs
-  {
-    id: "INT-13",
-    role: "Machine Learning & Recommenders Intern",
-    company: "Swiggy AI Labs",
-    location: "Bengaluru / Hybrid",
-    stipend: "₹30,000 - ₹40,000 / mo",
-    duration: "6 Months",
-    category: "aiml",
-    requirements: ["Python", "NumPy", "Pandas", "Algorithms", "DSA"],
-    applyUrl: "https://swiggy.careers",
-    portal: "Swiggy Careers",
-    matchScore: 97,
-    postedAgo: "Freshly Discovered"
-  },
-  {
-    id: "INT-14",
-    role: "Python Data Intelligence Intern",
-    company: "Zomato Data Systems",
-    location: "Gurugram / Remote",
-    stipend: "₹28,000 / mo",
-    duration: "3 - 6 Months",
-    category: "python",
-    requirements: ["Python", "Pandas", "Data Cleaning", "OOP", "Git"],
-    applyUrl: "https://zomato.com/careers",
-    portal: "Zomato Careers",
-    matchScore: 95,
-    postedAgo: "15m ago"
-  },
-  {
-    id: "INT-15",
-    role: "Distributed Systems & Java Intern",
-    company: "Razorpay Engineering",
-    location: "Bengaluru / Remote",
-    stipend: "₹35,000 / mo",
-    duration: "6 Months",
-    category: "java",
-    requirements: ["Java", "Core OOP", "Data Structures", "Algorithms", "APIs"],
-    applyUrl: "https://razorpay.com/jobs",
-    portal: "Razorpay Careers",
-    matchScore: 96,
-    postedAgo: "Just now"
-  },
-  {
-    id: "INT-16",
-    role: "Backend & Algorithmic Problem Solving Intern",
-    company: "CRED Infrastructure",
-    location: "Bengaluru, KA",
-    stipend: "₹35,000 - ₹45,000 / mo",
-    duration: "4 Months",
-    category: "dsa",
-    requirements: ["C++", "Python", "DSA", "Problem Solving", "System Basics"],
-    applyUrl: "https://careers.cred.club",
-    portal: "CRED Careers",
-    matchScore: 98,
-    postedAgo: "Freshly Discovered"
-  },
-  {
-    id: "INT-17",
-    role: "AI/ML Collegiate Research Fellow",
-    company: "Samsung PRISM Student R&D",
-    location: "Mumbai / Pune",
-    stipend: "₹25,000 / mo + Cert",
-    duration: "4 - 6 Months",
-    category: "aiml",
-    requirements: ["Python", "Scikit-Learn", "Matplotlib", "AI Research", "KJSIT Affiliation"],
-    applyUrl: "https://samsungprism.com",
-    portal: "Samsung PRISM",
-    matchScore: 99,
-    postedAgo: "1h ago"
-  },
-  {
-    id: "INT-18",
-    role: "AI Voice Intelligence & GenAI Intern",
-    company: "Adobe Research India",
-    location: "Noida / Remote",
-    stipend: "₹35,000 - ₹50,000 / mo",
-    duration: "3 - 6 Months",
-    category: "aiml",
-    requirements: ["Python", "NLP", "Speech Processing", "LEGACY Project Experience", "DSA"],
-    applyUrl: "https://adobe.com/careers",
-    portal: "Adobe Research",
-    matchScore: 99,
-    postedAgo: "Freshly Discovered"
-  },
-  {
-    id: "INT-19",
-    role: "Python Backend & Microservices Intern",
-    company: "Groww Fintech Tech Hub",
-    location: "Bengaluru / Remote",
-    stipend: "₹25,000 - ₹30,000 / mo",
-    duration: "3 Months",
-    category: "python",
-    requirements: ["Python", "REST APIs", "Data Structures", "SQL", "Git"],
-    applyUrl: "https://groww.in/careers",
-    portal: "Groww Careers",
-    matchScore: 94,
-    postedAgo: "2h ago"
-  },
-  {
-    id: "INT-20",
-    role: "Platform Engineering & Java Intern",
-    company: "PhonePe Payments Team",
-    location: "Mumbai / Bengaluru",
-    stipend: "₹30,000 / mo",
-    duration: "6 Months",
-    category: "java",
-    requirements: ["Java", "OOP", "Concurrency Basics", "DSA", "Problem Solving"],
-    applyUrl: "https://phonepe.com/careers",
-    portal: "PhonePe Careers",
-    matchScore: 93,
-    postedAgo: "3h ago"
-  },
-  {
-    id: "INT-21",
-    role: "Undergraduate AI Research Fellow",
-    company: "IIT Bombay TIH (Innovation Hub)",
-    location: "Powai, Mumbai (Near KJSIT)",
-    stipend: "₹20,000 / mo",
-    duration: "3 - 6 Months",
-    category: "aiml",
-    requirements: ["Python", "NumPy", "Pandas", "Scikit-Learn", "DSA"],
-    applyUrl: "https://iitb.ac.in",
-    portal: "IIT Bombay Outreach",
-    matchScore: 100,
-    postedAgo: "Just now"
-  },
-  {
-    id: "INT-22",
-    role: "Core Systems & Embedded C++ Intern",
-    company: "Qualcomm India",
-    location: "Bengaluru / Remote",
-    stipend: "₹35,000 / mo",
-    duration: "4 Months",
-    category: "dsa",
-    requirements: ["C++", "C", "Data Structures", "Memory Management", "Algorithms"],
-    applyUrl: "https://qualcomm.com/careers",
-    portal: "Qualcomm Direct",
-    matchScore: 95,
-    postedAgo: "4h ago"
-  },
-  {
-    id: "INT-23",
-    role: "Developer Tooling & Web APIs Intern",
-    company: "Postman Engineering",
-    location: "Remote (India)",
-    stipend: "₹30,000 / mo",
-    duration: "3 Months",
-    category: "web",
-    requirements: ["HTML", "CSS", "JavaScript", "REST APIs", "Git"],
-    applyUrl: "https://postman.com/careers",
-    portal: "Postman Careers",
-    matchScore: 94,
-    postedAgo: "5h ago"
-  },
-  {
-    id: "INT-24",
-    role: "Open Source AI & Python Contributor",
-    company: "GSoC / Open Source Ecosystem",
-    location: "Remote (Global)",
-    stipend: "$1,500 - $3,000 USD stipend",
-    duration: "3 Months",
-    category: "aiml",
-    requirements: ["Python", "Git", "Open Source", "DSA", "Problem Solving"],
-    applyUrl: "https://summerofcode.withgoogle.com",
-    portal: "Google Summer of Code",
-    matchScore: 98,
-    postedAgo: "Freshly Discovered"
-  },
-
-  // BATCH C: High-Growth Startups & Systems Hubs
-  {
-    id: "INT-25",
-    role: "AI Software & CUDA Acceleration Intern",
-    company: "NVIDIA AI Ecosystem",
-    location: "Pune / Remote",
-    stipend: "₹32,000 - ₹45,000 / mo",
-    duration: "6 Months",
-    category: "aiml",
-    requirements: ["Python", "C++", "DSA", "NumPy", "Deep Learning Basics"],
-    applyUrl: "https://nvidia.com/careers",
-    portal: "NVIDIA University Careers",
-    matchScore: 97,
-    postedAgo: "Just now"
-  },
-  {
-    id: "INT-26",
-    role: "Algorithmic Trading & Python Systems Intern",
-    company: "Zerodha Tech Labs",
-    location: "Bengaluru / Remote",
-    stipend: "₹30,000 / mo",
-    duration: "3 - 6 Months",
-    category: "python",
-    requirements: ["Python", "Data Structures", "OOP", "APIs", "Algorithms"],
-    applyUrl: "https://zerodha.tech",
-    portal: "Zerodha Tech",
-    matchScore: 96,
-    postedAgo: "2h ago"
-  },
-  {
-    id: "INT-27",
-    role: "Cryptographic Data Structures Intern",
-    company: "Polygon Labs",
-    location: "Remote (India)",
-    stipend: "₹35,000 / mo",
-    duration: "3 Months",
-    category: "dsa",
-    requirements: ["C++", "DSA", "Algorithms", "Problem Solving", "Git"],
-    applyUrl: "https://polygon.technology/careers",
-    portal: "Polygon Careers",
-    matchScore: 95,
-    postedAgo: "Freshly Discovered"
-  },
-  {
-    id: "INT-28",
-    role: "Java Enterprise Architecture Intern",
-    company: "Infosys Springboard R&D",
-    location: "Pune / Mumbai",
-    stipend: "₹20,000 / mo",
-    duration: "4 Months",
-    category: "java",
-    requirements: ["Java", "Core Java OOP", "Data Structures", "SQL"],
-    applyUrl: "https://springboard.infosys.com",
-    portal: "Infosys Campus",
-    matchScore: 93,
-    postedAgo: "6h ago"
-  },
-  {
-    id: "INT-29",
-    role: "Modern UI & Web Components Intern",
-    company: "Vercel Community Labs",
-    location: "Remote (India)",
-    stipend: "₹20,000 - ₹30,000 / mo",
-    duration: "3 Months",
-    category: "web",
-    requirements: ["HTML5", "CSS3", "Responsive Design", "JavaScript", "Git"],
-    applyUrl: "https://vercel.com/careers",
-    portal: "Vercel Community",
-    matchScore: 93,
-    postedAgo: "1h ago"
-  },
-  {
-    id: "INT-30",
-    role: "Defense & Autonomous Systems C++ Intern",
-    company: "DRDO Advanced Research Unit",
-    location: "Navi Mumbai / Pune",
-    stipend: "₹20,000 / mo + Govt Cert",
-    duration: "3 Months",
-    category: "dsa",
-    requirements: ["C++", "C", "Algorithms", "DSA", "Linux"],
-    applyUrl: "https://drdo.gov.in",
-    portal: "DRDO Student Portal",
-    matchScore: 96,
-    postedAgo: "Freshly Discovered"
-  },
-  {
-    id: "INT-31",
-    role: "Cloud AI & Student Ambassador Track",
-    company: "Microsoft Learn Track",
-    location: "Remote (India)",
-    stipend: "₹25,000 / mo + Azure Credits",
-    duration: "6 Months",
-    category: "aiml",
-    requirements: ["Python", "Cloud Basics", "AI/ML", "Technical Leadership (IET/IETE)"],
-    applyUrl: "https://studentambassadors.microsoft.com",
-    portal: "Microsoft Learn",
-    matchScore: 99,
-    postedAgo: "30m ago"
-  },
-  {
-    id: "INT-32",
-    role: "Full Stack Web & Python Intern",
-    company: "Zoho Corporation",
-    location: "Chennai / Remote",
-    stipend: "₹18,000 - ₹25,000 / mo",
-    duration: "6 Months",
-    category: "web",
-    requirements: ["HTML", "CSS", "Python", "Database", "Git"],
-    applyUrl: "https://zoho.com/careers",
-    portal: "Zoho Direct",
-    matchScore: 92,
-    postedAgo: "3h ago"
-  }
-];
-
-// Initialize active 12 internships from pool
-let currentPoolBatchIndex = 0;
-PORTFOLIO_DATA.internships = MASTER_INTERNSHIP_POOL.slice(0, 12);
 
 
 // ==========================================
@@ -769,104 +305,89 @@ class ParticleCanvas {
 // ==========================================
 class Typewriter {
   constructor(elementId, phrases) {
-    this.target = document.getElementById(elementId);
+    this.element = document.getElementById(elementId);
     this.phrases = phrases;
-    this.currentPhraseIdx = 0;
-    this.currentCharIdx = 0;
+    this.phraseIndex = 0;
+    this.charIndex = 0;
     this.isDeleting = false;
-    this.typingSpeed = 75;
-    this.deletingSpeed = 35;
-    this.pauseDelay = 1800;
-    if (this.target) this.tick();
+    this.speed = 80;
+    if (this.element) {
+      this.type();
+    }
   }
 
-  tick() {
-    const currentPhrase = this.phrases[this.currentPhraseIdx];
+  type() {
+    const currentPhrase = this.phrases[this.phraseIndex];
 
     if (this.isDeleting) {
-      this.target.textContent = currentPhrase.substring(0, this.currentCharIdx - 1);
-      this.currentCharIdx--;
+      this.element.textContent = currentPhrase.substring(0, this.charIndex - 1);
+      this.charIndex--;
+      this.speed = 40;
     } else {
-      this.target.textContent = currentPhrase.substring(0, this.currentCharIdx + 1);
-      this.currentCharIdx++;
+      this.element.textContent = currentPhrase.substring(0, this.charIndex + 1);
+      this.charIndex++;
+      this.speed = 80;
     }
 
-    let delay = this.isDeleting ? this.deletingSpeed : this.typingSpeed;
-
-    if (!this.isDeleting && this.currentCharIdx === currentPhrase.length) {
-      delay = this.pauseDelay;
+    if (!this.isDeleting && this.charIndex === currentPhrase.length) {
       this.isDeleting = true;
-    } else if (this.isDeleting && this.currentCharIdx === 0) {
+      this.speed = 1800; // Pause at end of phrase
+    } else if (this.isDeleting && this.charIndex === 0) {
       this.isDeleting = false;
-      this.currentPhraseIdx = (this.currentPhraseIdx + 1) % this.phrases.length;
-      delay = 400;
+      this.phraseIndex = (this.phraseIndex + 1) % this.phrases.length;
+      this.speed = 400; // Pause before new phrase
     }
 
-    setTimeout(() => this.tick(), delay);
+    setTimeout(() => this.type(), this.speed);
   }
 }
 
 // ==========================================
-// 5. TOAST NOTIFICATION SYSTEM
+// 5. SKILLS MATRIX RENDERING & TABS
 // ==========================================
-function showToast(message, type = 'info') {
-  const container = document.getElementById('toast-container');
-  if (!container) return;
-
-  const toast = document.createElement('div');
-  toast.className = `toast ${type}`;
-
-  const iconSvg = type === 'success' 
-    ? `<svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>`
-    : `<svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>`;
-
-  toast.innerHTML = `${iconSvg}<span>${message}</span>`;
-  container.appendChild(toast);
-
-  synth.playClick();
-
-  setTimeout(() => {
-    toast.style.opacity = '0';
-    toast.style.transform = 'translateX(100%)';
-    setTimeout(() => toast.remove(), 250);
-  }, 3500);
-}
-
-// ==========================================
-// 6. SKILLS MATRIX RENDERER & FILTER
-// ==========================================
-function renderSkills(category = 'all') {
+function renderSkills(filter = 'all') {
   const container = document.getElementById('skills-grid-container');
   if (!container) return;
 
-  const filtered = category === 'all' 
+  const filtered = filter === 'all' 
     ? PORTFOLIO_DATA.skills 
-    : PORTFOLIO_DATA.skills.filter(s => s.category === category);
+    : PORTFOLIO_DATA.skills.filter(s => s.category === filter);
 
   container.innerHTML = filtered.map(skill => `
     <div class="glass-card skill-card" data-category="${skill.category}">
       <div class="skill-card-top">
         <div class="skill-info-group">
-          <div class="skill-badge-icon">${skill.icon}</div>
+          <span class="skill-badge-icon">${skill.icon}</span>
           <div>
-            <h4 class="skill-name">${skill.name}</h4>
-            <span class="skill-category-tag">${skill.category.toUpperCase()}</span>
+            <h3 class="skill-name">${skill.name}</h3>
+            <span class="skill-category-tag">${getCategoryLabel(skill.category)}</span>
           </div>
         </div>
         <span class="skill-level-pct">${skill.level}%</span>
       </div>
-      <div class="skill-progress-track">
-        <div class="skill-progress-bar" style="width: ${skill.level}%"></div>
+      
+      <div class="skill-progress-bar-wrap">
+        <div class="skill-progress-bar" style="width: ${skill.level}%;"></div>
       </div>
-      <div class="skill-tags-cloud">
-        ${skill.tags.map(tag => `<span class="micro-tag">${tag}</span>`).join('')}
+
+      <div class="skill-tag-pills">
+        ${skill.tags.map(t => `<span class="tag">${t}</span>`).join('')}
       </div>
     </div>
   `).join('');
 }
 
+function getCategoryLabel(cat) {
+  switch (cat) {
+    case 'languages': return 'Programming Language';
+    case 'dsa': return 'Core CS & DSA';
+    case 'aiml': return 'AI / ML Toolkits (Learning)';
+    default: return 'Tech Skill';
+  }
+}
+
 function initSkillsTabs() {
-  const tabs = document.querySelectorAll('.filter-tab');
+  const tabs = document.querySelectorAll('.skills-filter-bar .filter-tab');
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       synth.playClick();
@@ -882,7 +403,7 @@ function initSkillsTabs() {
 }
 
 // ==========================================
-// 7. PROJECTS SHOWCASE RENDERER & MODAL
+// 6. PROJECTS SHOWCASE (FLAGSHIP: LEGACY)
 // ==========================================
 function renderProjects(category = 'all') {
   const container = document.getElementById('projects-grid-container');
@@ -892,58 +413,103 @@ function renderProjects(category = 'all') {
     ? PORTFOLIO_DATA.projects
     : PORTFOLIO_DATA.projects.filter(p => p.category === category);
 
-  container.innerHTML = filtered.map(proj => `
-    <article class="glass-card project-card" data-project-id="${proj.id}">
-      <div>
-        <div class="project-card-header">
-          <span class="project-badge">${proj.badge}</span>
-          <div class="project-links">
-            <a href="${proj.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="GitHub Code">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-              </svg>
-            </a>
-            <a href="${proj.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Project Link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-            </a>
+  container.innerHTML = filtered.map(project => `
+    <div class="glass-card flagship-hud-card" data-project-id="${project.id}">
+      <div class="flagship-hud-header">
+        <div class="hud-status-badge">
+          <span class="hud-status-dot"></span>
+          <span class="hud-status-text">FLAGSHIP ACTIVE PROJECT &bull; IN ACTIVE DEVELOPMENT</span>
+        </div>
+        <span class="hud-year-pill">${project.year}</span>
+      </div>
+
+      <div class="flagship-hud-grid">
+        <div class="flagship-main-col">
+          <div class="flagship-title-wrap">
+            <span class="flagship-prefix-tag">// AI VIRTUAL ASSISTANT ARCHITECTURE</span>
+            <h3 class="flagship-title gradient-text">${project.title}</h3>
+            <p class="flagship-subtitle">${project.subtitle}</p>
+          </div>
+
+          <p class="flagship-desc">${project.desc}</p>
+
+          <!-- Waveform Visualizer Decor -->
+          <div class="waveform-box">
+            <span class="waveform-label">🎙️ Acoustic & NLP Audio Visualizer:</span>
+            <div class="waveform-bars">
+              <span class="wave-bar"></span>
+              <span class="wave-bar"></span>
+              <span class="wave-bar"></span>
+              <span class="wave-bar"></span>
+              <span class="wave-bar"></span>
+              <span class="wave-bar"></span>
+              <span class="wave-bar"></span>
+              <span class="wave-bar"></span>
+              <span class="wave-bar"></span>
+              <span class="wave-bar"></span>
+              <span class="wave-bar"></span>
+              <span class="wave-bar"></span>
+            </div>
+          </div>
+
+          <!-- Feature Highlights -->
+          <div class="flagship-highlights">
+            <span class="highlights-heading">Core Engineering Pillars:</span>
+            <ul class="highlights-list">
+              ${project.highlights.map(h => `<li>${h}</li>`).join('')}
+            </ul>
           </div>
         </div>
 
-        <h3 class="project-title">${proj.title}</h3>
-        <p class="project-desc">${proj.desc}</p>
-      </div>
+        <div class="flagship-side-col">
+          <!-- Live Telemetry Box -->
+          <div class="hud-metrics">
+            <div class="hud-metric-box">
+              <span class="hud-metric-val">Python</span>
+              <span class="hud-metric-lbl">Primary Logic Core</span>
+            </div>
+            <div class="hud-metric-box">
+              <span class="hud-metric-val">Voice & NLP</span>
+              <span class="hud-metric-lbl">Command Subsystem</span>
+            </div>
+            <div class="hud-metric-box">
+              <span class="hud-metric-val">Automation</span>
+              <span class="hud-metric-lbl">Workflow Engine</span>
+            </div>
+            <div class="hud-metric-box">
+              <span class="hud-metric-val">v1.0-dev</span>
+              <span class="hud-metric-lbl">Build State</span>
+            </div>
+          </div>
 
-      <div>
-        <div class="project-tech-tags">
-          ${proj.techStack.map(t => `<span class="tech-tag">${t}</span>`).join('')}
+          <!-- Tech Tags -->
+          <div class="flagship-tech-box">
+            <span class="tech-box-heading">Technology Matrix:</span>
+            <div class="project-tech-tags">
+              ${project.techStack.map(t => `<span class="tech-tag">${t}</span>`).join('')}
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="flagship-actions">
+            <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="btn-project-github">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>GitHub Repository</span>
+            </a>
+            <button class="btn btn-outline" onclick="openProjectModal('${project.id}')">
+              <span>View Technical Details</span>
+            </button>
+          </div>
         </div>
-
-        <button class="btn btn-outline project-footer-btn btn-view-project" data-id="${proj.id}">
-          <span>View Details &amp; Highlights</span>
-          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        </button>
       </div>
-    </article>
+    </div>
   `).join('');
-
-  // Attach modal triggers
-  container.querySelectorAll('.btn-view-project').forEach(btn => {
-    btn.addEventListener('click', () => {
-      synth.playClick();
-      const projId = btn.dataset.id;
-      openProjectModal(projId);
-    });
-  });
 }
 
 function initProjectsTabs() {
-  const tabs = document.querySelectorAll('.proj-tab');
+  const tabs = document.querySelectorAll('.projects-filter-bar .proj-tab');
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       synth.playClick();
@@ -979,369 +545,6 @@ function openProjectModal(projectId) {
   modal.showModal();
 }
 
-// ==========================================
-// 7B. AI INTERNSHIP SCOUT & APPLICATION GENERATOR
-// ==========================================
-let currentActiveInternship = null;
-let activePacketTab = 'cover-letter';
-let appliedInternshipIds = new Set();
-
-function generateCoverLetterText(internship) {
-  const p = PORTFOLIO_DATA.profile;
-  const today = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-  const reqsStr = internship.requirements.slice(0, 4).join(', ');
-
-  return `Subject: Application for ${internship.role} - ${p.name} (${p.college})
-
-Date: ${today}
-To: The Hiring Team, ${internship.company}
-
-Dear Hiring Team,
-
-I am writing to express my strong enthusiasm for the ${internship.role} position at ${internship.company}. I am currently a second-year Computer Engineering undergraduate at ${p.college} (graduating in 2029), with a passionate focus on Artificial Intelligence, Machine Learning, Data Structures & Algorithms (DSA), and software development.
-
-My skill set aligns closely with your needs in ${reqsStr}. I am actively engineering **LEGACY**, an intelligent autonomous virtual assistant (inspired by JARVIS) that integrates Python, natural language understanding, and automated system workflows. In addition, I continually sharpen my problem-solving abilities in DSA and collaborate as an active member of the ${p.techTeams[0]}.
-
-${internship.company}'s work in this domain is deeply exciting to me. I am eager to apply my technical curiosity, rapid learning capability, and hands-on dedication to deliver real value to your projects during this ${internship.duration} internship.
-
-Thank you for your time and consideration. I would welcome the opportunity to discuss my qualifications with your team.
-
-Sincerely,
-
-${p.name}
-Second Year B.Tech, Computer Engineering
-${p.college}
-Email: ${p.email}
-GitHub: ${p.github}
-LinkedIn: ${p.linkedin}
-`;
-}
-
-function generateColdOutreachText(internship) {
-  const p = PORTFOLIO_DATA.profile;
-  return `Subject: ${p.name} - KJSIT Comp Eng Student interested in ${internship.role} @ ${internship.company}
-
-Hi [Hiring Lead / Recruiter Name],
-
-I hope you are having a productive week!
-
-I noticed the ${internship.role} opening at ${internship.company} and was inspired by your team's mission. As a second-year Computer Engineering undergraduate at KJ Somaiya Institute of Technology with a strong focus in ${internship.requirements.slice(0, 3).join(', ')}, I would love to explore an internship opportunity with your group.
-
-Quick Profile Highlights:
-• Proficient in Python, C, C++, Java, and exploratory AI/ML pipelines (NumPy, Pandas, Scikit-Learn).
-• Solid grounding in Data Structures & Algorithms (DSA) and collegiate technical teamwork (IET KJSIT).
-• Currently building **LEGACY** (JARVIS-like AI Assistant): ${p.github}
-
-Would you be open to a quick 10-minute conversation or reviewing my resume? I would be thrilled to support ${internship.company} this term.
-
-Best regards,
-${p.name}
-${p.email} | ${p.linkedin}
-`;
-}
-
-let currentSearchQuery = '';
-
-function renderInternships(filter = 'all') {
-  const container = document.getElementById('internships-grid-container');
-  if (!container) return;
-
-  const currentTab = document.querySelector('.intern-tab.active')?.dataset.filter || filter;
-
-  let filtered = currentTab === 'all'
-    ? PORTFOLIO_DATA.internships
-    : PORTFOLIO_DATA.internships.filter(i => i.category === currentTab);
-
-  if (currentSearchQuery.trim()) {
-    const q = currentSearchQuery.toLowerCase();
-    filtered = filtered.filter(i => 
-      i.role.toLowerCase().includes(q) ||
-      i.company.toLowerCase().includes(q) ||
-      i.location.toLowerCase().includes(q) ||
-      i.requirements.some(r => r.toLowerCase().includes(q))
-    );
-  }
-
-  const allCountElem = document.getElementById('tab-count-all');
-  if (allCountElem) allCountElem.textContent = PORTFOLIO_DATA.internships.length;
-
-  if (filtered.length === 0) {
-    container.innerHTML = `
-      <div style="grid-column: 1 / -1; text-align: center; padding: 48px 20px; background: rgba(255,255,255,0.02); border: 1px dashed var(--border-glow); border-radius: var(--radius-md);">
-        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 8px;">No matching internships found for "${currentSearchQuery}".</p>
-        <button class="btn btn-sm btn-outline" id="btn-clear-search">Clear Search</button>
-      </div>
-    `;
-    const clearBtn = document.getElementById('btn-clear-search');
-    if (clearBtn) {
-      clearBtn.addEventListener('click', () => {
-        const input = document.getElementById('internship-search-input');
-        if (input) input.value = '';
-        currentSearchQuery = '';
-        renderInternships();
-      });
-    }
-    return;
-  }
-
-  container.innerHTML = filtered.map(item => {
-    const isApplied = appliedInternshipIds.has(item.id);
-    const isFresh = item.postedAgo?.includes('Just') || item.postedAgo?.includes('Fresh');
-
-    return `
-      <div class="glass-card internship-card" data-internship-id="${item.id}">
-        <div>
-          <div class="internship-card-header">
-            <div>
-              <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
-                <span class="intern-company">${item.company} &bull; ${item.portal}</span>
-                ${isFresh ? `<span style="font-size:0.68rem; background:rgba(6,182,212,0.18); border:1px solid #06b6d4; color:#38bdf8; padding:1px 6px; border-radius:10px; font-weight:600;">✨ NEW</span>` : ''}
-              </div>
-              <h3 class="intern-role">${item.role}</h3>
-            </div>
-            <span class="match-gauge-badge">${item.matchScore}% Match</span>
-          </div>
-
-          <div class="intern-meta-row">
-            <span class="intern-meta-item">📍 ${item.location}</span>
-            <span class="intern-meta-item">💰 ${item.stipend}</span>
-            <span class="intern-meta-item">⏱️ ${item.duration}</span>
-            ${item.postedAgo ? `<span class="intern-meta-item" style="color:var(--accent-light);">🕒 ${item.postedAgo}</span>` : ''}
-          </div>
-
-          <div class="intern-reqs">
-            ${item.requirements.map(r => `<span class="intern-req-tag">${r}</span>`).join('')}
-          </div>
-        </div>
-
-        <div class="intern-actions">
-          <button class="btn btn-primary btn-sm btn-open-packet" data-id="${item.id}">
-            <span>AI Application Packet</span>
-          </button>
-          <button class="btn btn-outline btn-sm btn-toggle-applied ${isApplied ? 'applied-btn' : ''}" data-id="${item.id}">
-            <span>${isApplied ? '✓ Tracked' : 'Mark Applied'}</span>
-          </button>
-        </div>
-      </div>
-    `;
-  }).join('');
-
-  // Attach packet triggers
-  container.querySelectorAll('.btn-open-packet').forEach(btn => {
-    btn.addEventListener('click', () => {
-      synth.playClick();
-      openApplicationPacketModal(btn.dataset.id);
-    });
-  });
-
-  // Attach mark applied triggers
-  container.querySelectorAll('.btn-toggle-applied').forEach(btn => {
-    btn.addEventListener('click', () => {
-      synth.playSuccess();
-      const id = btn.dataset.id;
-      if (appliedInternshipIds.has(id)) {
-        appliedInternshipIds.delete(id);
-        showToast('Removed from applied tracker', 'info');
-      } else {
-        appliedInternshipIds.add(id);
-        showToast('Marked as Applied! Added to application ledger', 'success');
-      }
-      updateScoutStats();
-      renderInternships(document.querySelector('.intern-tab.active')?.dataset.filter || 'all');
-    });
-  });
-}
-
-function updateScoutStats() {
-  const countElem = document.getElementById('stat-applied-count');
-  if (countElem) {
-    countElem.textContent = appliedInternshipIds.size;
-  }
-}
-
-function initInternshipTabs() {
-  const tabs = document.querySelectorAll('.intern-tab');
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      synth.playClick();
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      renderInternships(tab.dataset.filter);
-    });
-  });
-
-  const searchInput = document.getElementById('internship-search-input');
-  if (searchInput) {
-    searchInput.addEventListener('input', (e) => {
-      currentSearchQuery = e.target.value;
-      renderInternships();
-    });
-  }
-}
-
-function openApplicationPacketModal(internshipId) {
-  const item = PORTFOLIO_DATA.internships.find(i => i.id === internshipId);
-  if (!item) return;
-
-  currentActiveInternship = item;
-  const modal = document.getElementById('application-packet-modal');
-  if (!modal) return;
-
-  document.getElementById('packet-modal-title').textContent = `${item.role} @ ${item.company}`;
-  document.getElementById('packet-match-score').textContent = `${item.matchScore}% Match for Yash`;
-  document.getElementById('packet-apply-link').href = item.applyUrl;
-
-  updatePacketDisplay();
-  modal.showModal();
-}
-
-function updatePacketDisplay() {
-  if (!currentActiveInternship) return;
-  const display = document.getElementById('packet-text-display');
-  if (!display) return;
-
-  if (activePacketTab === 'cover-letter') {
-    display.textContent = generateCoverLetterText(currentActiveInternship);
-  } else {
-    display.textContent = generateColdOutreachText(currentActiveInternship);
-  }
-}
-
-function initApplicationPacketModal() {
-  const modal = document.getElementById('application-packet-modal');
-  const closeBtn = document.getElementById('packet-modal-close-btn');
-  const tabCover = document.getElementById('tab-cover-letter');
-  const tabCold = document.getElementById('tab-cold-email');
-  const copyBtn = document.getElementById('btn-copy-packet');
-
-  if (modal && closeBtn) {
-    closeBtn.addEventListener('click', () => {
-      synth.playClick();
-      modal.close();
-    });
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) modal.close();
-    });
-  }
-
-  if (tabCover && tabCold) {
-    tabCover.addEventListener('click', () => {
-      synth.playClick();
-      activePacketTab = 'cover-letter';
-      tabCover.classList.add('active');
-      tabCold.classList.remove('active');
-      updatePacketDisplay();
-    });
-
-    tabCold.addEventListener('click', () => {
-      synth.playClick();
-      activePacketTab = 'cold-email';
-      tabCold.classList.add('active');
-      tabCover.classList.remove('active');
-      updatePacketDisplay();
-    });
-  }
-
-  if (copyBtn) {
-    copyBtn.addEventListener('click', () => {
-      const display = document.getElementById('packet-text-display');
-      if (display) {
-        navigator.clipboard.writeText(display.textContent).then(() => {
-          synth.playSuccess();
-          showToast('Copied tailored application packet to clipboard!', 'success');
-        });
-      }
-    });
-  }
-}
-
-function initAutoApplyAllBtn() {
-  const btn = document.getElementById('btn-auto-apply-all');
-  if (!btn) return;
-
-  btn.addEventListener('click', () => {
-    synth.playClick();
-    btn.disabled = true;
-    const origHtml = btn.innerHTML;
-    btn.innerHTML = `<span>AI Auto-Applying...</span>`;
-
-    showToast('AI Agent: Analyzing 12 matching internships (AI/ML, Python, C++, Java)...', 'info');
-
-    setTimeout(() => {
-      showToast('AI Agent: Generated customized cover letters citing LEGACY and DSA...', 'info');
-      synth.playClick();
-    }, 1000);
-
-    setTimeout(() => {
-      showToast('AI Agent: Submitted 12 applications across LinkedIn, TCS NextStep, Jio, Wellfound, Unstop!', 'success');
-      synth.playSuccess();
-    }, 2200);
-
-    setTimeout(() => {
-      // Mark all as applied
-      PORTFOLIO_DATA.internships.forEach(i => appliedInternshipIds.add(i.id));
-      updateScoutStats();
-      renderInternships(document.querySelector('.intern-tab.active')?.dataset.filter || 'all');
-
-      btn.disabled = false;
-      btn.innerHTML = origHtml;
-
-      showToast(`📧 Full 12-Role Digest & Verification dispatched to ${PORTFOLIO_DATA.profile.email}`, 'success');
-      synth.playSuccess();
-    }, 3200);
-  });
-}
-
-function initScoutRescanBtn() {
-  const btn = document.getElementById('btn-run-scout-scan');
-  if (!btn) return;
-
-  btn.addEventListener('click', () => {
-    synth.playClick();
-    btn.disabled = true;
-    const originalText = btn.innerHTML;
-    btn.innerHTML = `<span>📡 Scanning Feeds...</span>`;
-
-    showToast('AI Scout: Querying live feeds (LinkedIn, Unstop, Wellfound, Internshala)...', 'info');
-
-    setTimeout(() => {
-      // Rotate pool batch (0 -> 1 -> 2 -> 0)
-      currentPoolBatchIndex = (currentPoolBatchIndex + 1) % 3;
-      const startIndex = currentPoolBatchIndex * 12;
-      const newBatch = MASTER_INTERNSHIP_POOL.slice(startIndex, startIndex + 12);
-
-      // If needed, fill remaining from start
-      if (newBatch.length < 12) {
-        const remaining = 12 - newBatch.length;
-        newBatch.push(...MASTER_INTERNSHIP_POOL.slice(0, remaining));
-      }
-
-      // Add dynamic recent discovery tags and slight score re-computation
-      PORTFOLIO_DATA.internships = newBatch.map((item, idx) => ({
-        ...item,
-        matchScore: Math.min(100, Math.max(92, item.matchScore + ((idx % 3) - 1))),
-        postedAgo: (idx % 2 === 0) ? "Just now" : "Freshly Discovered"
-      }));
-
-      // Update stat counters
-      const scannedCountElem = document.getElementById('stat-scanned-count');
-      if (scannedCountElem) scannedCountElem.textContent = `${(currentPoolBatchIndex + 1) * 12} / ${MASTER_INTERNSHIP_POOL.length}`;
-
-      const topMatchElem = document.getElementById('stat-avg-match');
-      if (topMatchElem) {
-        const avg = Math.round(PORTFOLIO_DATA.internships.reduce((acc, i) => acc + i.matchScore, 0) / PORTFOLIO_DATA.internships.length);
-        topMatchElem.textContent = `${avg}%`;
-      }
-
-      synth.playSuccess();
-      showToast(`✨ Rescan Complete! Surfaced 12 fresh internship openings (Batch ${currentPoolBatchIndex + 1}/3)!`, 'success');
-      btn.disabled = false;
-      btn.innerHTML = originalText;
-      renderInternships();
-    }, 1200);
-  });
-}
-
 function initModals() {
   const projectModal = document.getElementById('project-detail-modal');
   const projectCloseBtn = document.getElementById('modal-close-btn');
@@ -1354,30 +557,6 @@ function initModals() {
     projectModal.addEventListener('click', (e) => {
       if (e.target === projectModal) {
         projectModal.close();
-      }
-    });
-  }
-
-  // Email Setup Modal
-  const emailModal = document.getElementById('email-setup-modal');
-  const emailOpenBtn = document.getElementById('btn-open-email-setup');
-  const emailCloseBtn = document.getElementById('email-setup-close-btn');
-
-  if (emailOpenBtn && emailModal) {
-    emailOpenBtn.addEventListener('click', () => {
-      synth.playClick();
-      emailModal.showModal();
-    });
-  }
-
-  if (emailModal && emailCloseBtn) {
-    emailCloseBtn.addEventListener('click', () => {
-      synth.playClick();
-      emailModal.close();
-    });
-    emailModal.addEventListener('click', (e) => {
-      if (e.target === emailModal) {
-        emailModal.close();
       }
     });
   }
@@ -1418,7 +597,7 @@ function initModals() {
 }
 
 // ==========================================
-// 8. INTERACTIVE CLI TERMINAL ENGINE
+// 7. INTERACTIVE CLI TERMINAL ENGINE
 // ==========================================
 class TerminalEngine {
   constructor() {
@@ -1517,7 +696,6 @@ class TerminalEngine {
             <tr><td class="cmd-name">education</td><td>KJ Somaiya Institute of Technology (KJSIT) info</td></tr>
             <tr><td class="cmd-name">skills</td><td>List programming languages &amp; AI tools</td></tr>
             <tr><td class="cmd-name">projects</td><td>List featured development &amp; AI projects</td></tr>
-            <tr><td class="cmd-name">scout</td><td>Run AI Internship Scout &amp; view match scores</td></tr>
             <tr><td class="cmd-name">teams</td><td>IET &amp; IETE student tech team journey</td></tr>
             <tr><td class="cmd-name">cat resume</td><td>Open curriculum vitae summary</td></tr>
             <tr><td class="cmd-name">contact</td><td>Show email, GitHub &amp; LinkedIn</td></tr>
@@ -1580,88 +758,50 @@ class TerminalEngine {
         `;
         break;
 
-      case 'scout':
-      case 'internships':
-        resultDiv.innerHTML = `
-          <div>
-            <span class="term-highlight">=== AI INTERNSHIP SCOUT RESULTS (Top Matches for Yash) ===</span><br>
-            ${PORTFOLIO_DATA.internships.map(i => `
-              <div><strong>[${i.id}] ${i.role}</strong> @ ${i.company} &bull; <span class="term-cmd-highlight">${i.matchScore}% Match</span> (${i.location})</div>
-            `).join('')}
-            <div style="margin-top: 6px; color: var(--accent-light);">Type 'auto-apply' to submit all applications and dispatch email report to yashkhandar04@gmail.com!</div>
-          </div>
-        `;
-        break;
-
-      case 'auto-apply':
-      case 'autoapply':
-        synth.playSuccess();
-        resultDiv.innerHTML = `
-          <div>
-            <span class="term-highlight">⚡ AI AUTONOMOUS APPLICATION PIPELINE TRIGGERED</span><br>
-            [1/4] Scanning 5 verified internship portals... Done.<br>
-            [2/4] Generating tailored Cover Letters for Yash Khandar (KJSIT)... Done.<br>
-            [3/4] Auto-submitting applications to Cognitive AI, Nexis, VisionTech, Aether, Zenith... Confirmed ✓<br>
-            [4/4] Dispatched formatted status digest &amp; receipts to: <span class="term-cmd-highlight">yashkhandar04@gmail.com</span><br>
-            <span style="color:#34d399; font-weight:bold;">🎉 5/5 Applications Submitted &amp; Tracked!</span>
-          </div>
-        `;
-        PORTFOLIO_DATA.internships.forEach(i => appliedInternshipIds.add(i.id));
-        updateScoutStats();
-        renderInternships(document.querySelector('.intern-tab.active')?.dataset.filter || 'all');
-        showToast(`📧 Application Digest sent to ${PORTFOLIO_DATA.profile.email}`, 'success');
-        break;
-
       case 'cat':
         if (args[1] === 'resume' || args[1] === 'cv') {
           resultDiv.innerHTML = `
             <div>
               <span class="term-highlight">=== YASH KHANDAR - RESUME ===</span><br>
               <strong>College:</strong> KJ Somaiya Institute of Technology (B.Tech Comp Eng)<br>
-              <strong>Passions:</strong> AI/ML, Python, C++, Web Development, Tech Teams<br>
-              <button class="cmd-chip" style="margin-top: 8px;" onclick="document.getElementById('btn-open-resume').click()">Open Full Resume Modal</button>
+              <strong>Tech Stack:</strong> Python, C, C++, Java, HTML, CSS, AI/ML Libraries, DSA<br>
+              <strong>Teams:</strong> IET Technical Team, IETE KJSIT Technical Team<br>
+              <strong>Email:</strong> yashkhandar04@gmail.com | <strong>GitHub:</strong> github.com/yashkhandar001<br>
+              <span style="color: var(--accent-light);">Tip: Click the 'Resume' button in the top navbar for full printable PDF viewer.</span>
             </div>
           `;
         } else {
-          resultDiv.innerHTML = `<span class="term-error">Usage: cat resume</span>`;
+          resultDiv.innerHTML = `<span>cat: ${escapeHtml(args[1] || '')}: No such file or directory</span>`;
         }
         break;
 
       case 'contact':
         resultDiv.innerHTML = `
           <div>
-            <strong>Email:</strong> <a href="mailto:yashkhandar04@gmail.com" style="color:var(--accent-light); text-decoration:underline;">yashkhandar04@gmail.com</a><br>
-            <strong>GitHub:</strong> <a href="https://github.com/yashkhandar001" target="_blank" style="color:var(--accent-light); text-decoration:underline;">github.com/yashkhandar001</a><br>
-            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yash-khandar-125672370" target="_blank" style="color:var(--accent-light); text-decoration:underline;">linkedin.com/in/yash-khandar-125672370</a>
+            <span class="term-highlight">Direct Reach:</span><br>
+            📧 Email: <a href="mailto:yashkhandar04@gmail.com" style="color: #38bdf8; text-decoration: underline;">yashkhandar04@gmail.com</a><br>
+            🌐 GitHub: <a href="https://github.com/yashkhandar001" target="_blank" style="color: #38bdf8; text-decoration: underline;">github.com/yashkhandar001</a><br>
+            🔗 LinkedIn: <a href="https://www.linkedin.com/in/yash-khandar-125672370" target="_blank" style="color: #38bdf8; text-decoration: underline;">linkedin.com/in/yash-khandar-125672370</a>
           </div>
         `;
         break;
 
       case 'sudo':
-        if (args[1] === 'connect' || args[1] === 'hire') {
+        if (args[1] === 'connect') {
           synth.playSuccess();
-          resultDiv.innerHTML = `
-            <div style="color: #34d399; font-weight: bold;">
-              🎉 Connection protocol initiated!<br>
-              Yash is excited to collaborate and discuss new opportunities.<br>
-              Navigating to contact section...
-            </div>
-          `;
-          setTimeout(() => {
-            const contactSec = document.getElementById('contact');
-            if (contactSec) contactSec.scrollIntoView({ behavior: 'smooth' });
-          }, 700);
+          resultDiv.innerHTML = `<span class="term-highlight">[AUTH SUCCESS] Access granted. Opening mail dispatch...</span>`;
+          window.location.href = "mailto:yashkhandar04@gmail.com?subject=Hello%20Yash%20-%20From%20Portfolio%20Terminal";
         } else {
-          resultDiv.innerHTML = `<span class="term-error">Permission denied: try 'sudo connect'</span>`;
+          resultDiv.innerHTML = `<span>sudo: user 'guest' is not in sudoers file. This incident will be reported to Yash.</span>`;
         }
         break;
 
       case 'theme':
         if (args[1] === 'dark' || args[1] === 'light') {
           setTheme(args[1]);
-          resultDiv.innerHTML = `<span>Theme updated to <strong>${args[1]}</strong> mode.</span>`;
+          resultDiv.innerHTML = `<span class="term-highlight">Theme updated to '${args[1]}'.</span>`;
         } else {
-          resultDiv.innerHTML = `<span class="term-error">Usage: theme &lt;dark|light&gt;</span>`;
+          resultDiv.innerHTML = `<span>Usage: theme &lt;dark|light&gt;</span>`;
         }
         break;
 
@@ -1669,9 +809,9 @@ class TerminalEngine {
         const validAccents = ['indigo', 'cyan', 'emerald', 'purple', 'amber', 'rose'];
         if (validAccents.includes(args[1])) {
           setAccent(args[1]);
-          resultDiv.innerHTML = `<span>Accent color updated to <strong>${args[1]}</strong>.</span>`;
+          resultDiv.innerHTML = `<span class="term-highlight">Accent palette set to '${args[1]}'.</span>`;
         } else {
-          resultDiv.innerHTML = `<span class="term-error">Usage: accent &lt;${validAccents.join('|')}&gt;</span>`;
+          resultDiv.innerHTML = `<span>Usage: accent &lt;indigo|cyan|emerald|purple|amber|rose&gt;</span>`;
         }
         break;
 
@@ -1702,7 +842,7 @@ function escapeHtml(str) {
 }
 
 // ==========================================
-// 9. THEME & ACCENT SYSTEM
+// 8. THEME & ACCENT SYSTEM
 // ==========================================
 function setTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
@@ -1780,7 +920,7 @@ function initThemeControls() {
 }
 
 // ==========================================
-// 10. CONTACT FORM & INTERACTION HANDLERS
+// 9. CONTACT FORM & INTERACTION HANDLERS
 // ==========================================
 function initContactForm() {
   const form = document.getElementById('contact-form');
@@ -1803,8 +943,7 @@ function initContactForm() {
       isValid = false;
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailInput.value.trim() || !emailRegex.test(emailInput.value.trim())) {
+    if (!emailInput.value.trim() || !validateEmail(emailInput.value.trim())) {
       emailInput.closest('.form-group').classList.add('has-error');
       isValid = false;
     }
@@ -1815,12 +954,12 @@ function initContactForm() {
     }
 
     if (!isValid) {
-      synth.playBeep(220, 0.15, 'sawtooth');
-      showToast('Please correct the highlighted form errors.', 'info');
+      synth.playBeep(240, 0.12, 'sawtooth');
+      showToast('Please fill in all required fields properly.', 'error');
       return;
     }
 
-    // Submit animation simulation
+    // Submit Simulation
     submitBtn.disabled = true;
     const originalBtnHtml = submitBtn.innerHTML;
     submitBtn.innerHTML = `<span>Transmitting...</span>`;
@@ -1847,6 +986,42 @@ function initContactForm() {
       });
     });
   });
+}
+
+function validateEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+// ==========================================
+// 10. FLOATING TOAST NOTIFICATIONS
+// ==========================================
+function showToast(message, type = 'info') {
+  let container = document.querySelector('.toast-container');
+  if (!container) {
+    container = document.createElement('div');
+    container.className = 'toast-container';
+    document.body.appendChild(container);
+  }
+
+  const toast = document.createElement('div');
+  toast.className = `toast ${type}`;
+
+  const iconSvg = type === 'success'
+    ? `<svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>`
+    : `<svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>`;
+
+  toast.innerHTML = `
+    ${iconSvg}
+    <span>${message}</span>
+  `;
+
+  container.appendChild(toast);
+
+  setTimeout(() => {
+    toast.style.opacity = '0';
+    toast.style.transform = 'translateY(10px)';
+    setTimeout(() => toast.remove(), 250);
+  }, 3500);
 }
 
 // ==========================================
@@ -1953,12 +1128,6 @@ document.addEventListener('DOMContentLoaded', () => {
   renderProjects();
   initProjectsTabs();
 
-  renderInternships();
-  initInternshipTabs();
-  initApplicationPacketModal();
-  initScoutRescanBtn();
-  initAutoApplyAllBtn();
-
   initModals();
   initThemeControls();
   initContactForm();
@@ -1968,4 +1137,3 @@ document.addEventListener('DOMContentLoaded', () => {
   const yearElem = document.getElementById('footer-year');
   if (yearElem) yearElem.textContent = new Date().getFullYear();
 });
-

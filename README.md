@@ -1,4 +1,4 @@
-# 🚀 Yash Khandar — Developer Portfolio & AI Internship Scout
+# 🚀 Yash Khandar — Developer Portfolio
 
 > **Second Year B.Tech Computer Engineering Student** at **KJ Somaiya Institute of Technology (KJSIT), Mumbai**  
 > Active Member of **IET Technical Team (KJSIT)** & Former **IETE Technical Team**
@@ -7,21 +7,18 @@
 
 ## 🌟 Overview
 
-This repository hosts the personal developer portfolio and autonomous **AI Internship Scout & Auto-Application Suite** for **Yash Khandar**. Built with pure vanilla web technologies (HTML5, Modern CSS, ES6+ JavaScript), Web Audio API, and an autonomous Python backend.
+This repository hosts the personal developer portfolio for **Yash Khandar**. Built with modern vanilla web technologies (HTML5, Modern CSS, ES6+ JavaScript), Web Audio API, and an interactive particle constellation canvas. Fully responsive across desktop, tablet, and mobile devices.
 
 ---
 
 ## ✨ Features
 
-- 🌌 **Cyber Obsidian Design System**: High-contrast glassmorphism, responsive layout, atmospheric radial glows, and 6 switchable color themes.
-- ⚛️ **Interactive Particle Constellation**: Multi-hue particle physics canvas reacting to cursor coordinates.
-- 💻 **Interactive CLI Terminal**: Bash emulator supporting commands (`whoami`, `skills`, `projects`, `scout`, `auto-apply`, `cat resume`, `sudo connect`, `theme <color>`).
-- 🤖 **Flagship Active Project — LEGACY**: Autonomous AI-powered virtual assistant (inspired by JARVIS) featuring voice command interaction and task automation.
-- ⚡ **AI Internship Scout & Auto-Applier**:
-  - Automatically matches and scores 12 verified engineering internships (Cognitive AI, BharatAI, TCS Research, Reliance Jio, Aether Dynamics, Fractal Analytics, Zepto, etc.).
-  - Generates hyper-tailored Cover Letters & Recruiter Cold Outreach packets.
-  - Automatically updates an application ledger (`internship_tracker.json`).
-  - Automated HTML & Gmail SMTP email dispatch to `yashkhandar04@gmail.com`.
+- 🌌 **Cyber Obsidian Design System**: High-contrast glassmorphism, responsive layout, atmospheric radial glows, and 6 switchable color themes (Indigo, Cyan, Emerald, Purple, Amber, Rose).
+- 📱 **100% Mobile & Touch Friendly**: Custom animated hamburger navigation drawer, touch gesture support on particle canvas, swipe-friendly filter bars, and responsive typography.
+- ⚛️ **Interactive Particle Constellation**: Multi-hue particle physics canvas reacting to cursor and touch coordinates.
+- 💻 **Interactive CLI Terminal**: Bash emulator supporting commands (`help`, `whoami`, `education`, `skills`, `projects`, `teams`, `cat resume`, `contact`, `theme <dark|light>`, `accent <color>`, `sudo connect`, `clear`).
+- 🤖 **Flagship Active Project — LEGACY**: Autonomous AI-powered virtual assistant (inspired by JARVIS) featuring voice command interaction, NLP, and task automation.
+- 🔊 **Web Audio Synthesizer**: Subtle tactile UI sound feedback on clicks, typing, and interactions (toggleable).
 - 📄 **Interactive Resume Modal**: Print-ready and responsive CV viewer.
 
 ---
@@ -30,30 +27,18 @@ This repository hosts the personal developer portfolio and autonomous **AI Inter
 
 - **Programming Languages**: Python, C, C++, Java, HTML, CSS
 - **Core CS**: Data Structures & Algorithms (DSA), Object-Oriented Programming (OOP)
-- **AI / Machine Learning (Learning)**: NumPy, Pandas, Scikit-Learn, Matplotlib
-- **Web**: HTML5, Modern CSS (Glassmorphism & Variables), JavaScript (ES6+), Web Audio API, HTML5 Canvas
+- **AI / Machine Learning (Learning & Exploring)**: NumPy, Pandas, Scikit-Learn, Matplotlib
+- **Web Technologies**: HTML5, Modern CSS (Glassmorphism, CSS Variables, Flexbox/Grid), JavaScript (ES6+), Web Audio API, HTML5 Canvas
 
 ---
 
 ## 🚀 Running Locally
 
-### 1. View Web Portfolio
 ```bash
 # Start a local HTTP server
 python -m http.server 8080
 ```
 Open [http://localhost:8080](http://localhost:8080) in your browser.
-
-### 2. Run Autonomous AI Internship Agent
-```bash
-python internship_agent.py
-```
-This will:
-1. Scan verified internship pipelines.
-2. Evaluate profile match scores.
-3. Automatically write tailored application packets to `generated_applications/`.
-4. Update `internship_tracker.json`.
-5. Generate an email digest report saved to `email_notification_receipt.html` and dispatch to your inbox!
 
 ---
 

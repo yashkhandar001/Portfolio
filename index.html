@@ -46,7 +46,6 @@
           <li><a href="#about" class="nav-link" id="nav-link-about">About</a></li>
           <li><a href="#skills" class="nav-link" id="nav-link-skills">Skills</a></li>
           <li><a href="#projects" class="nav-link" id="nav-link-projects">Projects</a></li>
-          <li><a href="#internships" class="nav-link" id="nav-link-internships">AI Internship Scout</a></li>
           <li><a href="#experience" class="nav-link" id="nav-link-experience">Experience</a></li>
           <li><a href="#terminal-section" class="nav-link" id="nav-link-terminal">Terminal</a></li>
           <li><a href="#contact" class="nav-link" id="nav-link-contact">Contact</a></li>
@@ -131,7 +130,6 @@
         <li><a href="#about" class="mobile-nav-link">About</a></li>
         <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
         <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
-        <li><a href="#internships" class="mobile-nav-link">AI Internship Scout</a></li>
         <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
         <li><a href="#terminal-section" class="mobile-nav-link">Terminal</a></li>
         <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
@@ -404,90 +402,6 @@ yash = StudentEngineer()</code></pre>
       </div>
     </section>
 
-    <!-- AI INTERNSHIP SCOUT & APPLICATION COPILOT SECTION -->
-    <section class="section internship-section" id="internships">
-      <div class="section-container">
-        <div class="section-header">
-          <span class="section-pill">Autonomous Copilot</span>
-          <h2 class="section-title">AI Internship Scout &amp; Auto-Applier</h2>
-          <p class="section-subtitle">Real-time matching agent scanning AI/ML and software roles, computing match scores, and generating tailored application packets.</p>
-        </div>
-
-        <!-- Agent Scanner Dashboard Bar -->
-        <div class="glass-card scout-dashboard-card">
-          <div class="scout-status-row">
-            <div class="scout-agent-info">
-              <span class="agent-avatar">🤖</span>
-              <div>
-                <h4 class="agent-name">Yash's Autonomous Internship Agent v2.0</h4>
-                <p class="agent-target">Targeting: <strong>AI/ML Intern, Python Developer, Software Engineering Intern (2025/2026)</strong></p>
-              </div>
-            </div>
-            <div class="scout-actions">
-              <button class="btn btn-primary btn-sm" id="btn-auto-apply-all" title="Let AI automatically submit applications and send email updates">
-                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                </svg>
-                <span>⚡ Auto-Apply All (AI Agent)</span>
-              </button>
-              <button class="btn btn-glass btn-sm" id="btn-open-email-setup" title="Configure live email updates to yashkhandar04@gmail.com">
-                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-                <span>Email Updates Setup</span>
-              </button>
-              <button class="btn btn-outline btn-sm" id="btn-run-scout-scan" title="Rescan verified feeds">
-                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
-                </svg>
-                <span>Rescan</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="scout-stats-grid">
-            <div class="scout-stat-box">
-              <span class="scout-stat-val" id="stat-scanned-count">12</span>
-              <span class="scout-stat-lbl">Active Roles Tracked</span>
-            </div>
-            <div class="scout-stat-box">
-              <span class="scout-stat-val" id="stat-avg-match">99%</span>
-              <span class="scout-stat-lbl">Top Compatibility Match</span>
-            </div>
-            <div class="scout-stat-box">
-              <span class="scout-stat-val">KJSIT</span>
-              <span class="scout-stat-lbl">Verified College Profile</span>
-            </div>
-            <div class="scout-stat-box">
-              <span class="scout-stat-val" id="stat-applied-count">0</span>
-              <span class="scout-stat-lbl">Applied / Tracked</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Filter tabs & Search Bar for Internships -->
-        <div class="internships-filter-bar-wrapper">
-          <div class="internships-filter-bar" role="tablist">
-            <button class="intern-tab active" data-filter="all">All Openings (<span id="tab-count-all">12</span>)</button>
-            <button class="intern-tab" data-filter="aiml">AI / ML &amp; NLP</button>
-            <button class="intern-tab" data-filter="python">Python &amp; Automation</button>
-            <button class="intern-tab" data-filter="dsa">C++ &amp; DSA Systems</button>
-            <button class="intern-tab" data-filter="java">Java &amp; Software Dev</button>
-            <button class="intern-tab" data-filter="web">Web Development</button>
-          </div>
-          <div class="internship-search-box">
-            <input type="text" id="internship-search-input" placeholder="🔍 Search company, skill, city..." />
-          </div>
-        </div>
-
-        <!-- Internship Listings Grid -->
-        <div class="internships-grid" id="internships-grid-container">
-          <!-- Populated dynamically via script.js -->
-        </div>
-      </div>
-    </section>
-
     <!-- EXPERIENCE & EDUCATION TIMELINE -->
     <section class="section experience-section" id="experience">
       <div class="section-container">
@@ -613,8 +527,7 @@ yash = StudentEngineer()</code></pre>
             <button class="cmd-chip" data-cmd="education">education</button>
             <button class="cmd-chip" data-cmd="skills">skills</button>
             <button class="cmd-chip" data-cmd="projects">projects</button>
-            <button class="cmd-chip" data-cmd="scout">scout</button>
-            <button class="cmd-chip" data-cmd="auto-apply">auto-apply</button>
+            <button class="cmd-chip" data-cmd="teams">teams</button>
             <button class="cmd-chip" data-cmd="cat resume">cat resume</button>
             <button class="cmd-chip" data-cmd="contact">contact</button>
             <button class="cmd-chip" data-cmd="sudo connect">sudo connect</button>
@@ -861,211 +774,6 @@ yash = StudentEngineer()</code></pre>
               <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
             </svg>
           </a>
-        </div>
-      </div>
-    </div>
-  </dialog>
-
-  <!-- AI APPLICATION PACKET MODAL (<dialog>) -->
-  <dialog class="custom-modal" id="application-packet-modal" aria-labelledby="packet-modal-title">
-    <div class="modal-backdrop-blur"></div>
-    <div class="modal-box glass-card application-packet-box">
-      <div class="modal-header">
-        <div class="modal-tag-row">
-          <span class="project-badge" id="packet-badge">AI Tailored Application</span>
-          <span class="badge-status" id="packet-match-score">95% Match</span>
-        </div>
-        <button class="modal-close-btn" id="packet-modal-close-btn" aria-label="Close modal">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-
-      <div class="modal-body">
-        <h3 class="modal-title" id="packet-modal-title">Application for Company</h3>
-        <p class="modal-subtitle" id="packet-modal-subtitle">AI-generated customized cover letter &amp; recruiter outreach pitch for Yash Khandar.</p>
-
-        <!-- Tab switches inside packet -->
-        <div class="packet-tabs">
-          <button class="packet-tab-btn active" id="tab-cover-letter">Tailored Cover Letter</button>
-          <button class="packet-tab-btn" id="tab-cold-email">Recruiter Cold Outreach</button>
-        </div>
-
-        <div class="packet-content-box">
-          <pre class="packet-text-content" id="packet-text-display"></pre>
-        </div>
-
-        <div class="modal-actions">
-          <button class="btn btn-primary" id="btn-copy-packet">
-            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-            </svg>
-            <span>Copy to Clipboard</span>
-          </button>
-          <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="packet-apply-link">
-            <span>Open Application Portal</span>
-            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-              <polyline points="15 3 21 3 21 9"></polyline>
-              <line x1="10" y1="14" x2="21" y2="3"></line>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </dialog>
-
-  <!-- EMAIL DISPATCH & SETUP MODAL (<dialog>) -->
-  <dialog class="custom-modal" id="email-setup-modal" aria-labelledby="email-setup-title">
-    <div class="modal-backdrop-blur"></div>
-    <div class="modal-box glass-card" style="max-width: 680px;">
-      <div class="modal-header">
-        <div class="modal-tag-row">
-          <span class="project-badge">Notification Engine</span>
-          <span class="badge-status" style="background:rgba(16,185,129,0.15); color:#34d399;">Active • yashkhandar04@gmail.com</span>
-        </div>
-        <button class="modal-close-btn" id="email-setup-close-btn" aria-label="Close modal">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-
-      <div class="modal-body">
-        <h3 class="modal-title" id="email-setup-title">📧 Live Email Updates &amp; Application Tracker</h3>
-        <p class="modal-subtitle">Ensure automatic application reports land directly in your Gmail inbox (<strong>yashkhandar04@gmail.com</strong>).</p>
-
-        <!-- Method 1: Instant Browser / Web Gmail -->
-        <div style="background:rgba(99,102,241,0.08); border:1px solid var(--border-glow); border-radius:var(--radius-md); padding:16px; margin:16px 0;">
-          <h4 style="font-size:0.95rem; color:var(--text-main); margin-bottom:8px; display:flex; align-items:center; gap:6px;">
-            <span>⚡ Option 1: Instant 1-Click Digest to Gmail</span>
-          </h4>
-          <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.6; margin-bottom:12px;">
-            Open Gmail in your web browser with the full 12-role application digest pre-filled and formatted for your records:
-          </p>
-          <div style="display:flex; flex-wrap:wrap; gap:10px;">
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yashkhandar04@gmail.com&su=%F0%9F%9A%80+AI+Internship+Tracker+Digest+(12+Roles)+-+Yash+Khandar&body=Hello+Yash%2C%0A%0AYour+AI+Internship+Scout+has+tracked+and+processed+12+applications+for+your+Computer+Engineering+profile+at+KJSIT%3A%0A%0A1.+AI%2FML+Intern+%40+Cognitive+AI+Labs+(Mumbai%2C+Hybrid+-+Match%3A+100%25)%0A2.+Conversational+AI+Intern+%40+BharatAI+(Remote+-+Match%3A+99%25)%0A3.+Research+Intern+%40+TCS+Research+(Mumbai%2FPune+-+Match%3A+100%25)%0A4.+Python+Backend+%40+Reliance+Jio+AI+CoE+(Navi+Mumbai+-+Match%3A+96%25)%0A5.+C%2B%2B+%2F+DSA+Intern+%40+Aether+Dynamics+(Bengaluru+-+Match%3A+96%25)%0A6.+AI+Analytics+%40+Fractal+Analytics+(Mumbai+-+Match%3A+100%25)%0A7.+Java+Software+Dev+%40+LTIMindtree+(Navi+Mumbai+-+Match%3A+93%25)%0A8.+Autonomous+Agents+%40+Kreate+AI+Labs+(Remote+-+Match%3A+97%25)%0A9.+Computer+Vision+%40+VisionTech+(Mumbai+-+Match%3A+100%25)%0A10.+Systems+Software+%40+Nexis+Systems+(Remote+-+Match%3A+100%25)%0A11.+Data+Engineering+%40+Zepto+(Mumbai+-+Match%3A+100%25)%0A12.+Web+Dev+%40+Zenith+Studios+(Remote+-+Match%3A+91%25)%0A%0AAll+tailored+Cover+Letters+and+Outreach+emails+are+saved+in+generated_applications%2F." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-              <span>Open in Gmail Web (Browser)</span>
-            </a>
-            <a href="email_notification_receipt.html" target="_blank" class="btn btn-outline btn-sm">
-              <span>View Live HTML Email Receipt</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Method 2: Automatic Python Email Dispatch -->
-        <div style="background:rgba(6,182,212,0.06); border:1px solid rgba(6,182,212,0.25); border-radius:var(--radius-md); padding:16px; margin:16px 0;">
-          <h4 style="font-size:0.95rem; color:var(--text-main); margin-bottom:8px; display:flex; align-items:center; gap:6px;">
-            <span>🤖 Option 2: 1-Step Python Automated Setup</span>
-          </h4>
-          <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.6;">
-            To receive real emails automatically whenever the AI agent runs:
-          </p>
-          <ol style="font-size:0.85rem; color:var(--text-muted); padding-left:18px; margin-top:8px; line-height:1.7;">
-            <li>Get a 16-character App Password at <a href="https://myaccount.google.com/apppasswords" target="_blank" style="color:var(--accent-light); text-decoration:underline;">Google App Passwords</a>.</li>
-            <li>Run this command in your terminal: <code style="background:rgba(0,0,0,0.3); padding:2px 6px; border-radius:4px; color:#38bdf8;">python setup_email.py</code></li>
-            <li>Paste the 16-character code — a live test email will be delivered to your inbox instantly!</li>
-          </ol>
-        </div>
-
-        <!-- Application Tracker Live Summary Table -->
-        <div style="margin-top:16px;">
-          <h4 style="font-size:0.95rem; color:var(--text-main); margin-bottom:8px;">📊 Tracked Applications (12/12)</h4>
-          <div style="max-height:220px; overflow-y:auto; border:1px solid var(--border-subtle); border-radius:var(--radius-sm); font-size:0.8rem;">
-            <table style="width:100%; border-collapse:collapse; text-align:left;">
-              <thead style="background:rgba(255,255,255,0.05); color:var(--text-muted); position:sticky; top:0;">
-                <tr>
-                  <th style="padding:8px 10px;">Role</th>
-                  <th style="padding:8px 10px;">Company</th>
-                  <th style="padding:8px 10px;">Match</th>
-                  <th style="padding:8px 10px;">Status</th>
-                </tr>
-              </thead>
-              <tbody style="color:var(--text-main); font-size:0.78rem;">
-                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-                  <td style="padding:8px 10px;">AI / ML Intern</td>
-                  <td style="padding:8px 10px;">Cognitive AI Labs</td>
-                  <td style="padding:8px 10px; color:#34d399;">100%</td>
-                  <td style="padding:8px 10px;"><span style="background:rgba(16,185,129,0.2); color:#34d399; padding:2px 6px; border-radius:4px;">Applied</span></td>
-                </tr>
-                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-                  <td style="padding:8px 10px;">Conversational AI (LEGACY)</td>
-                  <td style="padding:8px 10px;">BharatAI Voice</td>
-                  <td style="padding:8px 10px; color:#34d399;">99%</td>
-                  <td style="padding:8px 10px;"><span style="background:rgba(16,185,129,0.2); color:#34d399; padding:2px 6px; border-radius:4px;">Applied</span></td>
-                </tr>
-                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-                  <td style="padding:8px 10px;">Research Intern</td>
-                  <td style="padding:8px 10px;">TCS Research</td>
-                  <td style="padding:8px 10px; color:#34d399;">100%</td>
-                  <td style="padding:8px 10px;"><span style="background:rgba(16,185,129,0.2); color:#34d399; padding:2px 6px; border-radius:4px;">Applied</span></td>
-                </tr>
-                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-                  <td style="padding:8px 10px;">Python Backend</td>
-                  <td style="padding:8px 10px;">Reliance Jio AI CoE</td>
-                  <td style="padding:8px 10px; color:#34d399;">96%</td>
-                  <td style="padding:8px 10px;"><span style="background:rgba(16,185,129,0.2); color:#34d399; padding:2px 6px; border-radius:4px;">Applied</span></td>
-                </tr>
-                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-                  <td style="padding:8px 10px;">C++ &amp; DSA Intern</td>
-                  <td style="padding:8px 10px;">Aether Dynamics</td>
-                  <td style="padding:8px 10px; color:#34d399;">96%</td>
-                  <td style="padding:8px 10px;"><span style="background:rgba(16,185,129,0.2); color:#34d399; padding:2px 6px; border-radius:4px;">Applied</span></td>
-                </tr>
-                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-                  <td style="padding:8px 10px;">AI &amp; Data Analytics</td>
-                  <td style="padding:8px 10px;">Fractal Analytics</td>
-                  <td style="padding:8px 10px; color:#34d399;">100%</td>
-                  <td style="padding:8px 10px;"><span style="background:rgba(16,185,129,0.2); color:#34d399; padding:2px 6px; border-radius:4px;">Applied</span></td>
-                </tr>
-                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-                  <td style="padding:8px 10px;">Java Software Dev</td>
-                  <td style="padding:8px 10px;">LTIMindtree</td>
-                  <td style="padding:8px 10px; color:#34d399;">93%</td>
-                  <td style="padding:8px 10px;"><span style="background:rgba(16,185,129,0.2); color:#34d399; padding:2px 6px; border-radius:4px;">Applied</span></td>
-                </tr>
-                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-                  <td style="padding:8px 10px;">Autonomous Agents</td>
-                  <td style="padding:8px 10px;">Kreate AI Labs</td>
-                  <td style="padding:8px 10px; color:#34d399;">97%</td>
-                  <td style="padding:8px 10px;"><span style="background:rgba(16,185,129,0.2); color:#34d399; padding:2px 6px; border-radius:4px;">Applied</span></td>
-                </tr>
-                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-                  <td style="padding:8px 10px;">Computer Vision</td>
-                  <td style="padding:8px 10px;">VisionTech Innovations</td>
-                  <td style="padding:8px 10px; color:#34d399;">100%</td>
-                  <td style="padding:8px 10px;"><span style="background:rgba(16,185,129,0.2); color:#34d399; padding:2px 6px; border-radius:4px;">Applied</span></td>
-                </tr>
-                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-                  <td style="padding:8px 10px;">Systems Software</td>
-                  <td style="padding:8px 10px;">Nexis Systems</td>
-                  <td style="padding:8px 10px; color:#34d399;">100%</td>
-                  <td style="padding:8px 10px;"><span style="background:rgba(16,185,129,0.2); color:#34d399; padding:2px 6px; border-radius:4px;">Applied</span></td>
-                </tr>
-                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-                  <td style="padding:8px 10px;">Data Engineering</td>
-                  <td style="padding:8px 10px;">Zepto Technology</td>
-                  <td style="padding:8px 10px; color:#34d399;">100%</td>
-                  <td style="padding:8px 10px;"><span style="background:rgba(16,185,129,0.2); color:#34d399; padding:2px 6px; border-radius:4px;">Applied</span></td>
-                </tr>
-                <tr>
-                  <td style="padding:8px 10px;">Web &amp; Frontend</td>
-                  <td style="padding:8px 10px;">Zenith Studios</td>
-                  <td style="padding:8px 10px; color:#34d399;">91%</td>
-                  <td style="padding:8px 10px;"><span style="background:rgba(16,185,129,0.2); color:#34d399; padding:2px 6px; border-radius:4px;">Applied</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
         </div>
       </div>
     </div>
