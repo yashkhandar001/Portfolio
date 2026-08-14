@@ -40,8 +40,9 @@ CANDIDATE_PROFILE = {
     "target_roles": ["AI/ML Intern", "Python Developer Intern", "Software Engineering Intern", "Data Science Intern", "Web Development Intern"]
 }
 
-# Curated 2025/2026 Internship Opportunities Pipeline for Yash Khandar (KJSIT)
+# Master 2025/2026 Internship Opportunities Catalog for Yash Khandar (KJSIT)
 INTERNSHIP_ROLES = [
+    # Batch 1: AI/ML & Conversational NLP
     {
         "id": "INT-01",
         "role": "AI / Machine Learning Intern",
@@ -185,6 +186,79 @@ INTERNSHIP_ROLES = [
         "requirements": ["HTML", "CSS", "Responsive UI", "Web Basics", "Git"],
         "apply_url": "https://internshala.com",
         "portal": "Internshala"
+    },
+    # Batch 2: Top Tier Tech & Research Hubs
+    {
+        "id": "INT-13",
+        "role": "Machine Learning & Recommenders Intern",
+        "company": "Swiggy AI Labs",
+        "location": "Bengaluru / Hybrid",
+        "stipend": "Rs. 30,000 - 40,000 / month",
+        "duration": "6 Months",
+        "category": "aiml",
+        "requirements": ["Python", "NumPy", "Pandas", "Algorithms", "DSA"],
+        "apply_url": "https://swiggy.careers",
+        "portal": "Swiggy Careers"
+    },
+    {
+        "id": "INT-14",
+        "role": "AI Voice Intelligence & GenAI Intern",
+        "company": "Adobe Research India",
+        "location": "Noida / Remote",
+        "stipend": "Rs. 35,000 - 50,000 / month",
+        "duration": "3 - 6 Months",
+        "category": "aiml",
+        "requirements": ["Python", "NLP", "Speech Processing", "DSA"],
+        "apply_url": "https://adobe.com/careers",
+        "portal": "Adobe Research"
+    },
+    {
+        "id": "INT-15",
+        "role": "Undergraduate AI Research Fellow",
+        "company": "IIT Bombay TIH (Innovation Hub)",
+        "location": "Powai, Mumbai",
+        "stipend": "Rs. 20,000 / month",
+        "duration": "3 - 6 Months",
+        "category": "aiml",
+        "requirements": ["Python", "NumPy", "Pandas", "Scikit-Learn", "DSA"],
+        "apply_url": "https://iitb.ac.in",
+        "portal": "IIT Bombay Outreach"
+    },
+    {
+        "id": "INT-16",
+        "role": "Backend & Algorithmic Systems Intern",
+        "company": "CRED Infrastructure",
+        "location": "Bengaluru, KA",
+        "stipend": "Rs. 35,000 - 45,000 / month",
+        "duration": "4 Months",
+        "category": "dsa",
+        "requirements": ["C++", "Python", "DSA", "Problem Solving"],
+        "apply_url": "https://careers.cred.club",
+        "portal": "CRED Careers"
+    },
+    {
+        "id": "INT-17",
+        "role": "Distributed Systems & Java Intern",
+        "company": "Razorpay Engineering",
+        "location": "Bengaluru / Remote",
+        "stipend": "Rs. 35,000 / month",
+        "duration": "6 Months",
+        "category": "java",
+        "requirements": ["Java", "Core Java OOP", "Data Structures", "Algorithms"],
+        "apply_url": "https://razorpay.com/jobs",
+        "portal": "Razorpay Careers"
+    },
+    {
+        "id": "INT-18",
+        "role": "AI Software & CUDA Acceleration Intern",
+        "company": "NVIDIA AI Ecosystem",
+        "location": "Pune / Remote",
+        "stipend": "Rs. 32,000 - 45,000 / month",
+        "duration": "6 Months",
+        "category": "aiml",
+        "requirements": ["Python", "C++", "DSA", "NumPy"],
+        "apply_url": "https://nvidia.com/careers",
+        "portal": "NVIDIA University"
     }
 ]
 

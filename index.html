@@ -466,14 +466,19 @@ yash = StudentEngineer()</code></pre>
           </div>
         </div>
 
-        <!-- Filter tabs for Internships -->
-        <div class="internships-filter-bar" role="tablist">
-          <button class="intern-tab active" data-filter="all">All Openings (12)</button>
-          <button class="intern-tab" data-filter="aiml">AI / ML &amp; NLP</button>
-          <button class="intern-tab" data-filter="python">Python &amp; Automation</button>
-          <button class="intern-tab" data-filter="dsa">C++ &amp; DSA Systems</button>
-          <button class="intern-tab" data-filter="java">Java &amp; Software Dev</button>
-          <button class="intern-tab" data-filter="web">Web Development</button>
+        <!-- Filter tabs & Search Bar for Internships -->
+        <div class="internships-filter-bar-wrapper" style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:12px; margin-bottom:20px;">
+          <div class="internships-filter-bar" role="tablist">
+            <button class="intern-tab active" data-filter="all">All Openings (<span id="tab-count-all">12</span>)</button>
+            <button class="intern-tab" data-filter="aiml">AI / ML &amp; NLP</button>
+            <button class="intern-tab" data-filter="python">Python &amp; Automation</button>
+            <button class="intern-tab" data-filter="dsa">C++ &amp; DSA Systems</button>
+            <button class="intern-tab" data-filter="java">Java &amp; Software Dev</button>
+            <button class="intern-tab" data-filter="web">Web Development</button>
+          </div>
+          <div class="internship-search-box" style="position:relative; min-width:240px; flex:1; max-width:320px;">
+            <input type="text" id="internship-search-input" placeholder="🔍 Search company, skill, city..." style="width:100%; padding:8px 14px; background:rgba(255,255,255,0.05); border:1px solid var(--border-glow); border-radius:var(--radius-sm); color:var(--text-main); font-size:0.85rem; outline:none; transition:border-color 0.2s;" />
+          </div>
         </div>
 
         <!-- Internship Listings Grid -->
