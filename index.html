@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-accent="indigo">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yash Khandar - Computer Engineering Student at KJ Somaiya Institute of Technology. Passionate about AI/ML, Python, C++, and Software Development.">
+  <meta name="keywords" content="Yash Khandar, Computer Engineering, KJSIT, AI ML, Python, C++, Java, Web Development, Portfolio, Student Developer">
+  <meta name="author" content="Yash Khandar">
+  
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Yash Khandar | Computer Engineering & AI/ML Enthusiast">
+  <meta property="og:description" content="Explore my projects, skills, tech team journey, and interactive terminal showcase.">
+  
+  <title>Yash Khandar | Computer Engineering &amp; AI/ML Enthusiast</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient background glow spots -->
+  <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-3" aria-hidden="true"></div>
+  
+  <!-- Interactive Particle Background Canvas -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- Sticky Glass Header / Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo" id="brand-logo" aria-label="Home">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-name">Yash</span>
+        <span class="logo-slash">/</span>
+        <span class="logo-bracket">&gt;</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link" id="nav-link-about">About</a></li>
+          <li><a href="#skills" class="nav-link" id="nav-link-skills">Skills</a></li>
+          <li><a href="#projects" class="nav-link" id="nav-link-projects">Projects</a></li>
+          <li><a href="#internships" class="nav-link" id="nav-link-internships">AI Internship Scout</a></li>
+          <li><a href="#experience" class="nav-link" id="nav-link-experience">Experience</a></li>
+          <li><a href="#terminal-section" class="nav-link" id="nav-link-terminal">Terminal</a></li>
+          <li><a href="#contact" class="nav-link" id="nav-link-contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Controls -->
+      <div class="header-actions">
+        <!-- Sound FX Toggle -->
+        <button class="icon-btn" id="sound-toggle-btn" aria-label="Toggle Sound Effects" title="Toggle Sound FX">
+          <svg class="icon sound-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+          <svg class="icon sound-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button class="icon-btn" id="theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+          <svg class="icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Accent Color Picker Dropdown -->
+        <div class="accent-picker-wrap">
+          <button class="icon-btn" id="accent-toggle-btn" aria-label="Pick Accent Color" title="Customize Accent Color">
+            <span class="accent-indicator-dot"></span>
+          </button>
+          <div class="accent-palette" id="accent-palette">
+            <span class="palette-title">Theme Accent</span>
+            <div class="palette-colors">
+              <button class="color-swatch active" data-color="indigo" title="Electric Indigo" style="--c: #6366f1"></button>
+              <button class="color-swatch" data-color="cyan" title="Cyber Cyan" style="--c: #06b6d4"></button>
+              <button class="color-swatch" data-color="emerald" title="Neon Emerald" style="--c: #10b981"></button>
+              <button class="color-swatch" data-color="purple" title="Cosmic Purple" style="--c: #a855f7"></button>
+              <button class="color-swatch" data-color="amber" title="Solar Amber" style="--c: #f59e0b"></button>
+              <button class="color-swatch" data-color="rose" title="Vibrant Rose" style="--c: #f43f5e"></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resume CTA -->
+        <button class="btn btn-outline btn-sm" id="btn-open-resume">
+          <span>Resume</span>
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Open Navigation Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+      <ul class="mobile-nav-list">
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#internships" class="mobile-nav-link">AI Internship Scout</a></li>
+        <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+        <li><a href="#terminal-section" class="mobile-nav-link">Terminal</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        <li><button class="btn btn-primary w-full" id="mobile-resume-btn">View Resume</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="section-container hero-grid">
+        <!-- Hero Text -->
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-radar"></span>
+            <span class="status-text">Second Year Computer Engineering Student &bull; KJSIT</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="hero-greeting">Hello, World! I'm</span>
+            <span class="hero-name gradient-text">Yash Khandar</span>
+          </h1>
+
+          <div class="typewriter-container">
+            <span class="typewriter-prefix">I explore &amp; build </span>
+            <span class="typewriter-text" id="typewriter-target"></span>
+            <span class="typewriter-cursor">|</span>
+          </div>
+
+          <p class="hero-bio">
+            I’m a Computer Engineering student passionate about AI/ML and coding. I enjoy learning new technologies, exploring Python, C, C++, and Java, and building hands-on projects to strengthen my skills. I’m committed to growing in the AIML field and open to opportunities that help me learn, collaborate, and create impactful solutions.
+          </p>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary" id="hero-btn-projects">
+              <span>View Projects</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-glass" id="hero-btn-contact">
+              <span>Get in Touch</span>
+            </a>
+            <a href="#terminal-section" class="btn btn-ghost" id="hero-btn-terminal" title="Try interactive CLI">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="4 17 10 11 4 5"></polyline>
+                <line x1="12" y1="19" x2="20" y2="19"></line>
+              </svg>
+              <span>CLI Sandbox</span>
+            </a>
+          </div>
+
+          <!-- Social Links Quick Bar -->
+          <div class="hero-social-bar">
+            <span class="social-label">Profiles:</span>
+            <a href="https://github.com/yashkhandar001" target="_blank" rel="noopener noreferrer" class="social-chip" title="GitHub: yashkhandar001">
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/yash-khandar-125672370" target="_blank" rel="noopener noreferrer" class="social-chip" title="LinkedIn Profile">
+              <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+            <button class="social-chip copy-chip" id="copy-email-btn" title="Click to copy email">
+              <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span id="email-chip-text">yashkhandar04@gmail.com</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Hero Visual Showcase Card -->
+        <div class="hero-visual">
+          <div class="glass-card hero-code-card">
+            <div class="card-header-bar">
+              <div class="window-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="card-title-tag">yash_khandar.py</span>
+              <span class="badge-status">Undergrad @ KJSIT</span>
+            </div>
+            <pre class="code-preview"><code><span class="code-kw">class</span> <span class="code-var">StudentEngineer</span>:
+    <span class="code-kw">def</span> <span class="code-prop">__init__</span>(self):
+        self.name = <span class="code-str">"Yash Khandar"</span>
+        self.college = <span class="code-str">"K.J. Somaiya Inst. of Tech"</span>
+        self.branch = <span class="code-str">"Computer Engineering"</span>
+        self.year = <span class="code-str">"Second Year (Grad: 2029)"</span>
+        self.interests = [<span class="code-str">"AI/ML"</span>, <span class="code-str">"Python"</span>, <span class="code-str">"C++"</span>, <span class="code-str">"Web Dev"</span>]
+        self.teams = [<span class="code-str">"IET Tech Team"</span>, <span class="code-str">"IETE KJSIT Alumni"</span>]
+        self.goal = <span class="code-str">"Build intelligent &amp; impactful solutions"</span>
+
+yash = StudentEngineer()</code></pre>
+            
+            <div class="hero-metrics-grid">
+              <div class="metric-item">
+                <span class="metric-number">2nd</span>
+                <span class="metric-label">Year B.Tech</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-number">2029</span>
+                <span class="metric-label">Grad Year</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-number">2+</span>
+                <span class="metric-label">Tech Teams</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-number">5+</span>
+                <span class="metric-label">Core Stacks</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-pill">About Me</span>
+          <h2 class="section-title">Driven by Curiosity &amp; Code</h2>
+          <p class="section-subtitle">Second-year Computer Engineering undergraduate at KJ Somaiya Institute of Technology.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Bio card -->
+          <div class="glass-card about-card-bio">
+            <h3 class="about-card-title">
+              <span class="title-icon">🎓</span>
+              My Background &amp; Vision
+            </h3>
+            <p>
+              I am currently pursuing my <strong>Bachelor of Technology in Computer Engineering</strong> at <strong>KJ Somaiya Institute of Technology (KJSIT)</strong>, graduating in September 2029. My primary focus is diving deep into Artificial Intelligence, Machine Learning, and fundamental software engineering principles.
+            </p>
+            <p>
+              Beyond coursework, I am an active technical community member. Having served on the <strong>IETE KJSIT Technical Team</strong> and now contributing as part of the <strong>IET Technical Team</strong>, I enjoy collaborating with peers, organizing tech workshops, and building real-world projects.
+            </p>
+
+            <div class="values-list">
+              <div class="value-item">
+                <span class="value-bullet">🤖</span>
+                <div>
+                  <strong>AI &amp; Machine Learning Aspirations:</strong> Exploring Python libraries (NumPy, Pandas, Scikit-Learn) and understanding neural architectures.
+                </div>
+              </div>
+              <div class="value-item">
+                <span class="value-bullet">💡</span>
+                <div>
+                  <strong>Strong Foundations:</strong> Solidifying core algorithmic thinking and data structures with C, C++, and Java.
+                </div>
+              </div>
+              <div class="value-item">
+                <span class="value-bullet">🤝</span>
+                <div>
+                  <strong>Collaborative Team Player:</strong> Active contributor to technical student chapters (IET &amp; IETE) driving peer learning.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- What I Do / Areas of Interest Cards -->
+          <div class="about-services-grid">
+            <div class="glass-card service-card">
+              <div class="service-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+              </div>
+              <h4 class="service-title">AI / Machine Learning</h4>
+              <p class="service-desc">Studying predictive modeling, data cleaning, exploratory analysis, and modern AI toolkits in Python.</p>
+            </div>
+
+            <div class="glass-card service-card">
+              <div class="service-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h4 class="service-title">C, C++ &amp; Java Programming</h4>
+              <p class="service-desc">Writing clean, structured code for object-oriented programming (OOP), algorithm design, and system logic.</p>
+            </div>
+
+            <div class="glass-card service-card">
+              <div class="service-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <h4 class="service-title">Web Development</h4>
+              <p class="service-desc">Building clean, interactive user interfaces using HTML5, CSS3, and modern JavaScript standards.</p>
+            </div>
+
+            <div class="glass-card service-card">
+              <div class="service-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h4 class="service-title">Tech Team Leadership</h4>
+              <p class="service-desc">Active organizer and technical team member in IET &amp; IETE student chapters at KJSIT.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS MATRIX SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-pill">Tech Stack</span>
+          <h2 class="section-title">Skills &amp; Technology Stack</h2>
+          <p class="section-subtitle">Programming languages and tools I work with and continuously practice.</p>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="skills-filter-bar" role="tablist" aria-label="Skills Categories">
+          <button class="filter-tab active" data-tab="all" role="tab" aria-selected="true">All Skills</button>
+          <button class="filter-tab" data-tab="languages" role="tab" aria-selected="false">Programming Languages</button>
+          <button class="filter-tab" data-tab="dsa" role="tab" aria-selected="false">DSA</button>
+          <button class="filter-tab" data-tab="aiml" role="tab" aria-selected="false">AI / ML Libraries (Learning)</button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid" id="skills-grid-container">
+          <!-- Dynamically populated via script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SHOWCASE SECTION -->
+    <section class="section projects-section" id="projects">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-pill">Current Focus</span>
+          <h2 class="section-title">Active Projects &amp; Innovations</h2>
+          <p class="section-subtitle">Flagship AI development — building autonomous systems and intelligent assistants.</p>
+        </div>
+
+        <!-- Project Categories Filter -->
+        <div class="projects-filter-bar" role="tablist">
+          <button class="proj-tab active" data-category="all">All Projects</button>
+          <button class="proj-tab" data-category="aiml">AI &amp; Automation</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid-container">
+          <!-- Populated dynamically via script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- AI INTERNSHIP SCOUT & APPLICATION COPILOT SECTION -->
+    <section class="section internship-section" id="internships">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-pill">Autonomous Copilot</span>
+          <h2 class="section-title">AI Internship Scout &amp; Auto-Applier</h2>
+          <p class="section-subtitle">Real-time matching agent scanning AI/ML and software roles, computing match scores, and generating tailored application packets.</p>
+        </div>
+
+        <!-- Agent Scanner Dashboard Bar -->
+        <div class="glass-card scout-dashboard-card">
+          <div class="scout-status-row">
+            <div class="scout-agent-info">
+              <span class="agent-avatar">🤖</span>
+              <div>
+                <h4 class="agent-name">Yash's Autonomous Internship Agent v2.0</h4>
+                <p class="agent-target">Targeting: <strong>AI/ML Intern, Python Developer, Software Engineering Intern (2025/2026)</strong></p>
+              </div>
+            </div>
+            <div class="scout-actions">
+              <button class="btn btn-primary btn-sm" id="btn-auto-apply-all" title="Let AI automatically submit applications and send email updates">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+                <span>⚡ Auto-Apply All (AI Agent)</span>
+              </button>
+              <button class="btn btn-glass btn-sm" id="btn-open-email-setup" title="Configure live email updates to yashkhandar04@gmail.com">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Email Updates Setup</span>
+              </button>
+              <button class="btn btn-outline btn-sm" id="btn-run-scout-scan" title="Rescan verified feeds">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+                </svg>
+                <span>Rescan</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="scout-stats-grid">
+            <div class="scout-stat-box">
+              <span class="scout-stat-val" id="stat-scanned-count">12</span>
+              <span class="scout-stat-lbl">Active Roles Tracked</span>
+            </div>
+            <div class="scout-stat-box">
+              <span class="scout-stat-val" id="stat-avg-match">99%</span>
+              <span class="scout-stat-lbl">Top Compatibility Match</span>
+            </div>
+            <div class="scout-stat-box">
+              <span class="scout-stat-val">KJSIT</span>
+              <span class="scout-stat-lbl">Verified College Profile</span>
+            </div>
+            <div class="scout-stat-box">
+              <span class="scout-stat-val" id="stat-applied-count">0</span>
+              <span class="scout-stat-lbl">Applied / Tracked</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter tabs for Internships -->
+        <div class="internships-filter-bar" role="tablist">
+          <button class="intern-tab active" data-filter="all">All Openings (12)</button>
+          <button class="intern-tab" data-filter="aiml">AI / ML &amp; NLP</button>
+          <button class="intern-tab" data-filter="python">Python &amp; Automation</button>
+          <button class="intern-tab" data-filter="dsa">C++ &amp; DSA Systems</button>
+          <button class="intern-tab" data-filter="java">Java &amp; Software Dev</button>
+          <button class="intern-tab" data-filter="web">Web Development</button>
+        </div>
+
+        <!-- Internship Listings Grid -->
+        <div class="internships-grid" id="internships-grid-container">
+          <!-- Populated dynamically via script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & EDUCATION TIMELINE -->
+    <section class="section experience-section" id="experience">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-pill">Journey</span>
+          <h2 class="section-title">Education &amp; Technical Teams</h2>
+          <p class="section-subtitle">My academic path and leadership experience in collegiate tech societies.</p>
+        </div>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-line"></div>
+
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot">
+              <span class="dot-inner"></span>
+            </div>
+            <div class="glass-card timeline-card">
+              <div class="timeline-badge-row">
+                <span class="timeline-period">2025 - Present</span>
+                <span class="badge-accent">Current Role</span>
+              </div>
+              <h3 class="timeline-role">Technical Team Member</h3>
+              <h4 class="timeline-company">IET (Institution of Engineering and Technology) &bull; KJSIT Student Chapter</h4>
+              <p class="timeline-desc">
+                Currently contributing to the technical team at IET KJSIT. Assisting in orchestrating technical coding competitions, workshops, and student tech engagement initiatives across the department.
+              </p>
+              <div class="timeline-tags">
+                <span class="tag">Technical Events</span>
+                <span class="tag">Coding Workshops</span>
+                <span class="tag">Team Collaboration</span>
+                <span class="tag">Problem Solving</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot">
+              <span class="dot-inner"></span>
+            </div>
+            <div class="glass-card timeline-card">
+              <div class="timeline-badge-row">
+                <span class="timeline-period">2024 - 2025</span>
+                <span class="badge-muted">Completed</span>
+              </div>
+              <h3 class="timeline-role">Technical Team Member</h3>
+              <h4 class="timeline-company">IETE (Institution of Electronics and Telecommunication Engineers) &bull; KJSIT</h4>
+              <p class="timeline-desc">
+                Served as an active member of the IETE KJSIT technical team. Collaborated on organizing college technical fests, hands-on learning sessions, and peer-to-peer coding discussions.
+              </p>
+              <div class="timeline-tags">
+                <span class="tag">IETE KJSIT</span>
+                <span class="tag">Event Organization</span>
+                <span class="tag">Hardware/Software Basics</span>
+                <span class="tag">Technical Support</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot">
+              <span class="dot-inner"></span>
+            </div>
+            <div class="glass-card timeline-card">
+              <div class="timeline-badge-row">
+                <span class="timeline-period">2024 - 2029 (Expected Sept 2029)</span>
+                <span class="badge-accent">Degree in Progress</span>
+              </div>
+              <h3 class="timeline-role">Bachelor of Technology (B.Tech) in Computer Engineering</h3>
+              <h4 class="timeline-company">KJ Somaiya Institute of Technology (KJSIT), Mumbai</h4>
+              <p class="timeline-desc">
+                Currently in Second Year. Key focus areas include Object Oriented Programming, Data Structures &amp; Algorithms, Computer Architecture, Discrete Mathematics, and Artificial Intelligence &amp; Machine Learning foundations.
+              </p>
+              <div class="timeline-tags">
+                <span class="tag">Computer Engineering</span>
+                <span class="tag">KJSIT</span>
+                <span class="tag">OOP (Java/C++)</span>
+                <span class="tag">Data Structures</span>
+                <span class="tag">AI/ML Exploration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE CLI TERMINAL SECTION -->
+    <section class="section terminal-section" id="terminal-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-pill">Interactive Sandbox</span>
+          <h2 class="section-title">Developer Terminal</h2>
+          <p class="section-subtitle">Run commands directly or click quick action buttons to explore my portfolio like an engineer.</p>
+        </div>
+
+        <div class="terminal-container glass-card">
+          <!-- Terminal Title Bar -->
+          <div class="terminal-bar">
+            <div class="window-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <div class="terminal-title">guest@yash-portfolio: ~ (bash)</div>
+            <div class="terminal-actions">
+              <button class="terminal-clear-btn" id="terminal-clear-btn" title="Clear terminal screen">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px;">
+                  <polyline points="3 6 5 6 21 6"></polyline>
+                  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                </svg>
+                <span>Clear</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Quick Command Helper Chips -->
+          <div class="terminal-quick-chips">
+            <span class="quick-label">Quick Commands:</span>
+            <button class="cmd-chip" data-cmd="help">help</button>
+            <button class="cmd-chip" data-cmd="whoami">whoami</button>
+            <button class="cmd-chip" data-cmd="education">education</button>
+            <button class="cmd-chip" data-cmd="skills">skills</button>
+            <button class="cmd-chip" data-cmd="projects">projects</button>
+            <button class="cmd-chip" data-cmd="scout">scout</button>
+            <button class="cmd-chip" data-cmd="auto-apply">auto-apply</button>
+            <button class="cmd-chip" data-cmd="cat resume">cat resume</button>
+            <button class="cmd-chip" data-cmd="contact">contact</button>
+            <button class="cmd-chip" data-cmd="sudo connect">sudo connect</button>
+          </div>
+
+          <!-- Terminal Output Body -->
+          <div class="terminal-body" id="terminal-output">
+            <div class="term-line welcome-line">
+              <span class="term-highlight">Yash Khandar Portfolio Shell [KJSIT Edition]</span><br>
+              Type <span class="term-cmd-highlight">'help'</span> or click any quick command chip above to begin.
+            </div>
+          </div>
+
+          <!-- Terminal Input Row -->
+          <form class="terminal-input-row" id="terminal-form" autocomplete="off">
+            <span class="term-prompt">guest@yash:~$</span>
+            <input type="text" id="terminal-input" class="term-input" placeholder="Type a command (e.g. whoami, skills, projects)..." spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off">
+            <button type="submit" class="term-submit-btn" aria-label="Execute Command">Run</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-pill">Get In Touch</span>
+          <h2 class="section-title">Let's Connect &amp; Collaborate</h2>
+          <p class="section-subtitle">Interested in collaborating on a project, sharing opportunities, or discussing AI/ML? Feel free to reach out!</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Direct Contact Cards -->
+          <div class="contact-info-column">
+            <div class="glass-card contact-info-card">
+              <div class="contact-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-card-content">
+                <span class="contact-card-label">Direct Email</span>
+                <span class="contact-card-val">yashkhandar04@gmail.com</span>
+              </div>
+              <button class="copy-action-btn" data-copy="yashkhandar04@gmail.com" title="Copy Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+              </button>
+            </div>
+
+            <div class="glass-card contact-info-card">
+              <div class="contact-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="contact-card-content">
+                <span class="contact-card-label">College &amp; Location</span>
+                <span class="contact-card-val">KJ Somaiya Inst. of Technology, Mumbai</span>
+              </div>
+            </div>
+
+            <div class="glass-card contact-info-card">
+              <div class="contact-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div class="contact-card-content">
+                <span class="contact-card-label">Status &amp; Availability</span>
+                <span class="contact-card-val" id="live-timezone-status">Open to Internships &amp; Projects</span>
+              </div>
+            </div>
+
+            <div class="glass-card contact-social-box">
+              <h4>Connect on Social Platforms</h4>
+              <div class="contact-social-pills">
+                <a href="https://github.com/yashkhandar001" target="_blank" rel="noopener noreferrer" class="social-pill">
+                  <span>GitHub: yashkhandar001</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/yash-khandar-125672370" target="_blank" rel="noopener noreferrer" class="social-pill">
+                  <span>LinkedIn Profile</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <div class="glass-card contact-form-card">
+            <form id="contact-form" novalidate>
+              <div class="form-header">
+                <h3>Send a Message</h3>
+                <p>Feel free to reach out for inquiries, project ideas, or networking.</p>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name">Your Name <span class="required-star">*</span></label>
+                  <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Rahul Sharma" required>
+                  <span class="field-error-msg" id="name-error">Please enter your name</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email">Email Address <span class="required-star">*</span></label>
+                  <input type="email" id="contact-email" name="email" class="form-input" placeholder="rahul@example.com" required>
+                  <span class="field-error-msg" id="email-error">Please enter a valid email</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">Subject</label>
+                <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="AI/ML discussion, project collaboration, internship...">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Message <span class="required-star">*</span></label>
+                <textarea id="contact-message" name="message" class="form-textarea" rows="5" placeholder="Hi Yash, I came across your portfolio and wanted to connect about..." required></textarea>
+                <span class="field-error-msg" id="message-error">Please enter a message</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-full" id="contact-submit-btn">
+                <span class="btn-text">Transmit Message</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="section-container footer-grid">
+      <div class="footer-brand">
+        <a href="#hero" class="brand-logo">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-name">Yash Khandar</span>
+          <span class="logo-slash">/</span>
+          <span class="logo-bracket">&gt;</span>
+        </a>
+        <p class="footer-tagline">Second Year Computer Engineering Student at KJ Somaiya Institute of Technology &bull; Passionate about AI/ML &amp; Software Development.</p>
+      </div>
+
+      <div class="footer-links">
+        <span class="footer-col-title">Navigation</span>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#terminal-section">Terminal</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <span class="footer-col-title">Connect</span>
+        <ul>
+          <li><a href="https://github.com/yashkhandar001" target="_blank" rel="noopener noreferrer">GitHub (@yashkhandar001)</a></li>
+          <li><a href="https://www.linkedin.com/in/yash-khandar-125672370" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="mailto:yashkhandar04@gmail.com">yashkhandar04@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="section-container footer-bottom-flex">
+        <p>&copy; <span id="footer-year">2026</span> Yash Khandar &bull; KJ Somaiya Institute of Technology.</p>
+        <a href="#hero" class="back-to-top" id="back-to-top-btn" aria-label="Back to top">
+          <span>Back to Top</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PROJECT DETAIL MODAL (<dialog>) -->
+  <dialog class="custom-modal" id="project-detail-modal" aria-labelledby="modal-project-title">
+    <div class="modal-backdrop-blur"></div>
+    <div class="modal-box glass-card">
+      <div class="modal-header">
+        <div class="modal-tag-row">
+          <span class="project-badge" id="modal-project-badge">AI / ML</span>
+          <span class="modal-year" id="modal-project-year">2025</span>
+        </div>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close dialog">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <h3 class="modal-title" id="modal-project-title">Project Title</h3>
+        <p class="modal-subtitle" id="modal-project-subtitle">Subtitle and short summary</p>
+
+        <!-- Dynamic Visual Gradient Mockup Banner -->
+        <div class="modal-banner" id="modal-project-banner">
+          <div class="banner-inner-content">
+            <div class="banner-code-decor" id="modal-banner-decor">&lt;Project Overview /&gt;</div>
+          </div>
+        </div>
+
+        <div class="modal-section">
+          <h4>Key Features &amp; Implementation</h4>
+          <ul class="modal-highlights-list" id="modal-project-highlights">
+            <!-- Populated via script.js -->
+          </ul>
+        </div>
+
+        <div class="modal-section">
+          <h4>Technologies &amp; Libraries Used</h4>
+          <div class="modal-tech-stack" id="modal-project-stack">
+            <!-- Populated via script.js -->
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="modal-btn-live">
+            <span>Live Demonstration</span>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="modal-btn-code">
+            <span>View Source Code</span>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- AI APPLICATION PACKET MODAL (<dialog>) -->
+  <dialog class="custom-modal" id="application-packet-modal" aria-labelledby="packet-modal-title">
+    <div class="modal-backdrop-blur"></div>
+    <div class="modal-box glass-card application-packet-box">
+      <div class="modal-header">
+        <div class="modal-tag-row">
+          <span class="project-badge" id="packet-badge">AI Tailored Application</span>
+          <span class="badge-status" id="packet-match-score">95% Match</span>
+        </div>
+        <button class="modal-close-btn" id="packet-modal-close-btn" aria-label="Close modal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <h3 class="modal-title" id="packet-modal-title">Application for Company</h3>
+        <p class="modal-subtitle" id="packet-modal-subtitle">AI-generated customized cover letter &amp; recruiter outreach pitch for Yash Khandar.</p>
+
+        <!-- Tab switches inside packet -->
+        <div class="packet-tabs">
+          <button class="packet-tab-btn active" id="tab-cover-letter">Tailored Cover Letter</button>
+          <button class="packet-tab-btn" id="tab-cold-email">Recruiter Cold Outreach</button>
+        </div>
+
+        <div class="packet-content-box">
+          <pre class="packet-text-content" id="packet-text-display"></pre>
+        </div>
+
+        <div class="modal-actions">
+          <button class="btn btn-primary" id="btn-copy-packet">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span>Copy to Clipboard</span>
+          </button>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="packet-apply-link">
+            <span>Open Application Portal</span>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- EMAIL DISPATCH & SETUP MODAL (<dialog>) -->
+  <dialog class="custom-modal" id="email-setup-modal" aria-labelledby="email-setup-title">
+    <div class="modal-backdrop-blur"></div>
+    <div class="modal-box glass-card" style="max-width: 680px;">
+      <div class="modal-header">
+        <div class="modal-tag-row">
+          <span class="project-badge">Notification Engine</span>
+          <span class="badge-status" style="background:rgba(16,185,129,0.15); color:#34d399;">Active • yashkhandar04@gmail.com</span>
+        </div>
+        <button class="modal-close-btn" id="email-setup-close-btn" aria-label="Close modal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <h3 class="modal-title" id="email-setup-title">📧 Live Email Updates Configuration</h3>
+        <p class="modal-subtitle">Ensure automatic application reports land directly in your Gmail inbox (<strong>yashkhandar04@gmail.com</strong>).</p>
+
+        <div style="background:rgba(99,102,241,0.08); border:1px solid var(--border-glow); border-radius:var(--radius-md); padding:16px; margin:16px 0;">
+          <h4 style="font-size:0.95rem; color:var(--text-main); margin-bottom:8px; display:flex; align-items:center; gap:6px;">
+            <span>⚡ How Real Email Delivery Works</span>
+          </h4>
+          <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.6;">
+            Google Gmail requires a <strong>16-character App Password</strong> for automated scripts to send emails safely without asking for your main account password.
+          </p>
+          <ol style="font-size:0.85rem; color:var(--text-muted); padding-left:18px; margin-top:8px; line-height:1.7;">
+            <li>Go to your <a href="https://myaccount.google.com/security" target="_blank" style="color:var(--accent-light); text-decoration:underline;">Google Account Security</a>.</li>
+            <li>Under <em>"2-Step Verification"</em>, click on <strong>"App passwords"</strong>.</li>
+            <li>Name it <code>Internship Agent</code> and copy the 16-character code.</li>
+            <li>Run <code>python internship_agent.py</code> in your terminal and paste the code once!</li>
+          </ol>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:10px; margin-top:20px;">
+          <a href="mailto:yashkhandar04@gmail.com?subject=🚀%20AI%20Internship%20Auto-Apply%20Digest%20(12%20Roles)&body=Hello%20Yash,%0A%0AYour%20AI%20Internship%20Scout%20has%20matched%2012%20active%20opportunities%20for%20your%20Computer%20Engineering%20profile%20at%20KJSIT!%0A%0AApplied%20Roles:%0A1.%20AI/ML%20Intern%20@%20Cognitive%20AI%20Labs%20(98%%20Match)%0A2.%20Conversational%20AI%20Intern%20@%20BharatAI%20(99%%20Match)%0A3.%20Research%20Intern%20@%20TCS%20Research%20(95%%20Match)%0A4.%20Python%20Backend%20@%20Reliance%20Jio%20(96%%20Match)%0A5.%20C++%20/%20DSA%20Intern%20@%20Aether%20Dynamics%20(96%%20Match)%0A6.%20AI%20Analytics%20@%20Fractal%20Analytics%20(94%%20Match)%0A...and%206%20more!%0A%0AAll%20cover%20letters%20are%20saved%20in%20generated_applications/." class="btn btn-primary" id="btn-dispatch-test-email" style="width:100%;">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+            <span>Open Email Client with Full 12-Role Digest</span>
+          </a>
+
+          <a href="email_notification_receipt.html" target="_blank" class="btn btn-outline" style="width:100%;">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            <span>View Live HTML Email Receipt</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- RESUME PREVIEW MODAL (<dialog>) -->
+  <dialog class="custom-modal resume-modal" id="resume-modal" aria-labelledby="resume-modal-title">
+    <div class="modal-backdrop-blur"></div>
+    <div class="modal-box glass-card resume-box">
+      <div class="modal-header">
+        <div class="resume-header-titles">
+          <h3 id="resume-modal-title">Yash Khandar - Curriculum Vitae</h3>
+          <span class="resume-subtitle">Computer Engineering Student &bull; KJ Somaiya Institute of Technology</span>
+        </div>
+        <div class="resume-modal-top-actions">
+          <button class="btn btn-sm btn-outline" id="resume-print-btn" title="Print or Save PDF">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px; height:14px;">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            <span>Print / PDF</span>
+          </button>
+          <button class="modal-close-btn" id="resume-modal-close-btn" aria-label="Close Resume">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="resume-paper" id="resume-paper-content">
+        <!-- Resume Header -->
+        <div class="r-head">
+          <div class="r-name">YASH KHANDAR</div>
+          <div class="r-title">Computer Engineering Student &bull; Aspiring AI/ML Engineer</div>
+          <div class="r-contacts">
+            <span>📧 yashkhandar04@gmail.com</span> &bull;
+            <span>🌐 github.com/yashkhandar001</span> &bull;
+            <span>🔗 linkedin.com/in/yash-khandar-125672370</span> &bull;
+            <span>📍 Mumbai, India</span>
+          </div>
+        </div>
+
+        <div class="r-section">
+          <div class="r-sec-title">PROFILE SUMMARY</div>
+          <p class="r-summary">
+            Second-year Computer Engineering undergraduate at KJ Somaiya Institute of Technology (KJSIT), Mumbai. Passionate about Artificial Intelligence, Machine Learning, and core software development. Dedicated to building practical projects, mastering languages like Python, C, C++, and Java, and actively contributing to student technical organizations (IET &amp; IETE).
+          </p>
+        </div>
+
+        <div class="r-section">
+          <div class="r-sec-title">EDUCATION</div>
+          <div class="r-exp-item">
+            <div class="r-exp-header">
+              <div><strong>Bachelor of Technology (B.Tech) in Computer Engineering</strong></div>
+              <div class="r-exp-date">2024 - 2029 (Expected Sept 2029)</div>
+            </div>
+            <div style="font-size: 0.86rem; color: #475569; margin-bottom: 4px;">KJ Somaiya Institute of Technology (KJSIT), Mumbai</div>
+            <div class="r-bullets">Focus: Data Structures, Object-Oriented Programming (OOP), AI/ML Fundamentals, Algorithm Design</div>
+          </div>
+        </div>
+
+        <div class="r-section">
+          <div class="r-sec-title">TECHNICAL SKILLS</div>
+          <div class="r-skills-list">
+            <div><strong>Programming Languages:</strong> Python, C, C++, Java, HTML5, CSS3, JavaScript (ES6+)</div>
+            <div><strong>AI / Machine Learning (Exploring &amp; Learning):</strong> NumPy, Pandas, Scikit-Learn, Matplotlib, Data Preprocessing, Model Training Fundamentals</div>
+            <div><strong>Web Development:</strong> HTML5, CSS3, Responsive Design, Vanilla JavaScript, DOM Manipulation</div>
+            <div><strong>Core CS &amp; Tools:</strong> Object-Oriented Programming (OOP), Data Structures &amp; Algorithms (DSA), Git, GitHub, Linux Basics</div>
+          </div>
+        </div>
+
+        <div class="r-section">
+          <div class="r-sec-title">TECHNICAL TEAM &amp; LEADERSHIP EXPERIENCE</div>
+          
+          <div class="r-exp-item">
+            <div class="r-exp-header">
+              <div><strong>Technical Team Member</strong> &bull; IET (Institution of Engineering and Technology) KJSIT</div>
+              <div class="r-exp-date">2025 - Present</div>
+            </div>
+            <ul class="r-bullets">
+              <li>Contributing to technical operations, student workshops, and coding challenges within KJSIT.</li>
+              <li>Collaborating with cross-functional student teams on event management and technical support.</li>
+            </ul>
+          </div>
+
+          <div class="r-exp-item">
+            <div class="r-exp-header">
+              <div><strong>Technical Team Member</strong> &bull; IETE KJSIT Technical Team</div>
+              <div class="r-exp-date">2024 - 2025</div>
+            </div>
+            <ul class="r-bullets">
+              <li>Actively organized technical symposia, student competitions, and hands-on peer sessions.</li>
+              <li>Assisted in coordinating technical fests and promoting peer coding initiatives.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="r-section">
+          <div class="r-sec-title">PROJECT HIGHLIGHTS</div>
+          <ul class="r-bullets">
+            <li><strong>AI Exploratory Data &amp; Prediction Pipeline:</strong> Built Python data exploration and machine learning models with NumPy, Pandas, and Scikit-Learn.</li>
+            <li><strong>Interactive Developer Portfolio &amp; CLI Sandbox:</strong> Designed a responsive, glassmorphic portfolio featuring custom terminal emulator and particle physics canvas.</li>
+            <li><strong>Algorithm &amp; Data Structures Simulator (C++/Python):</strong> Developed visual demonstration for sorting and graph pathfinding algorithms.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
