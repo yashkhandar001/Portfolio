@@ -931,43 +931,136 @@ yash = StudentEngineer()</code></pre>
       </div>
 
       <div class="modal-body">
-        <h3 class="modal-title" id="email-setup-title">📧 Live Email Updates Configuration</h3>
+        <h3 class="modal-title" id="email-setup-title">📧 Live Email Updates &amp; Application Tracker</h3>
         <p class="modal-subtitle">Ensure automatic application reports land directly in your Gmail inbox (<strong>yashkhandar04@gmail.com</strong>).</p>
 
+        <!-- Method 1: Instant Browser / Web Gmail -->
         <div style="background:rgba(99,102,241,0.08); border:1px solid var(--border-glow); border-radius:var(--radius-md); padding:16px; margin:16px 0;">
           <h4 style="font-size:0.95rem; color:var(--text-main); margin-bottom:8px; display:flex; align-items:center; gap:6px;">
-            <span>⚡ How Real Email Delivery Works</span>
+            <span>⚡ Option 1: Instant 1-Click Digest to Gmail</span>
+          </h4>
+          <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.6; margin-bottom:12px;">
+            Open Gmail in your web browser with the full 12-role application digest pre-filled and formatted for your records:
+          </p>
+          <div style="display:flex; flex-wrap:wrap; gap:10px;">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yashkhandar04@gmail.com&su=%F0%9F%9A%80+AI+Internship+Tracker+Digest+(12+Roles)+-+Yash+Khandar&body=Hello+Yash%2C%0A%0AYour+AI+Internship+Scout+has+tracked+and+processed+12+applications+for+your+Computer+Engineering+profile+at+KJSIT%3A%0A%0A1.+AI%2FML+Intern+%40+Cognitive+AI+Labs+(Mumbai%2C+Hybrid+-+Match%3A+100%25)%0A2.+Conversational+AI+Intern+%40+BharatAI+(Remote+-+Match%3A+99%25)%0A3.+Research+Intern+%40+TCS+Research+(Mumbai%2FPune+-+Match%3A+100%25)%0A4.+Python+Backend+%40+Reliance+Jio+AI+CoE+(Navi+Mumbai+-+Match%3A+96%25)%0A5.+C%2B%2B+%2F+DSA+Intern+%40+Aether+Dynamics+(Bengaluru+-+Match%3A+96%25)%0A6.+AI+Analytics+%40+Fractal+Analytics+(Mumbai+-+Match%3A+100%25)%0A7.+Java+Software+Dev+%40+LTIMindtree+(Navi+Mumbai+-+Match%3A+93%25)%0A8.+Autonomous+Agents+%40+Kreate+AI+Labs+(Remote+-+Match%3A+97%25)%0A9.+Computer+Vision+%40+VisionTech+(Mumbai+-+Match%3A+100%25)%0A10.+Systems+Software+%40+Nexis+Systems+(Remote+-+Match%3A+100%25)%0A11.+Data+Engineering+%40+Zepto+(Mumbai+-+Match%3A+100%25)%0A12.+Web+Dev+%40+Zenith+Studios+(Remote+-+Match%3A+91%25)%0A%0AAll+tailored+Cover+Letters+and+Outreach+emails+are+saved+in+generated_applications%2F." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              <span>Open in Gmail Web (Browser)</span>
+            </a>
+            <a href="email_notification_receipt.html" target="_blank" class="btn btn-outline btn-sm">
+              <span>View Live HTML Email Receipt</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Method 2: Automatic Python Email Dispatch -->
+        <div style="background:rgba(6,182,212,0.06); border:1px solid rgba(6,182,212,0.25); border-radius:var(--radius-md); padding:16px; margin:16px 0;">
+          <h4 style="font-size:0.95rem; color:var(--text-main); margin-bottom:8px; display:flex; align-items:center; gap:6px;">
+            <span>🤖 Option 2: 1-Step Python Automated Setup</span>
           </h4>
           <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.6;">
-            Google Gmail requires a <strong>16-character App Password</strong> for automated scripts to send emails safely without asking for your main account password.
+            To receive real emails automatically whenever the AI agent runs:
           </p>
           <ol style="font-size:0.85rem; color:var(--text-muted); padding-left:18px; margin-top:8px; line-height:1.7;">
-            <li>Go to your <a href="https://myaccount.google.com/security" target="_blank" style="color:var(--accent-light); text-decoration:underline;">Google Account Security</a>.</li>
-            <li>Under <em>"2-Step Verification"</em>, click on <strong>"App passwords"</strong>.</li>
-            <li>Name it <code>Internship Agent</code> and copy the 16-character code.</li>
-            <li>Run <code>python internship_agent.py</code> in your terminal and paste the code once!</li>
+            <li>Get a 16-character App Password at <a href="https://myaccount.google.com/apppasswords" target="_blank" style="color:var(--accent-light); text-decoration:underline;">Google App Passwords</a>.</li>
+            <li>Run this command in your terminal: <code style="background:rgba(0,0,0,0.3); padding:2px 6px; border-radius:4px; color:#38bdf8;">python setup_email.py</code></li>
+            <li>Paste the 16-character code — a live test email will be delivered to your inbox instantly!</li>
           </ol>
         </div>
 
-        <div style="display:flex; flex-direction:column; gap:10px; margin-top:20px;">
-          <a href="mailto:yashkhandar04@gmail.com?subject=🚀%20AI%20Internship%20Auto-Apply%20Digest%20(12%20Roles)&body=Hello%20Yash,%0A%0AYour%20AI%20Internship%20Scout%20has%20matched%2012%20active%20opportunities%20for%20your%20Computer%20Engineering%20profile%20at%20KJSIT!%0A%0AApplied%20Roles:%0A1.%20AI/ML%20Intern%20@%20Cognitive%20AI%20Labs%20(98%%20Match)%0A2.%20Conversational%20AI%20Intern%20@%20BharatAI%20(99%%20Match)%0A3.%20Research%20Intern%20@%20TCS%20Research%20(95%%20Match)%0A4.%20Python%20Backend%20@%20Reliance%20Jio%20(96%%20Match)%0A5.%20C++%20/%20DSA%20Intern%20@%20Aether%20Dynamics%20(96%%20Match)%0A6.%20AI%20Analytics%20@%20Fractal%20Analytics%20(94%%20Match)%0A...and%206%20more!%0A%0AAll%20cover%20letters%20are%20saved%20in%20generated_applications/." class="btn btn-primary" id="btn-dispatch-test-email" style="width:100%;">
-            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="22" y1="2" x2="11" y2="13"></line>
-              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-            </svg>
-            <span>Open Email Client with Full 12-Role Digest</span>
-          </a>
-
-          <a href="email_notification_receipt.html" target="_blank" class="btn btn-outline" style="width:100%;">
-            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            <span>View Live HTML Email Receipt</span>
-          </a>
+        <!-- Application Tracker Live Summary Table -->
+        <div style="margin-top:16px;">
+          <h4 style="font-size:0.95rem; color:var(--text-main); margin-bottom:8px;">📊 Tracked Applications (12/12)</h4>
+          <div style="max-height:220px; overflow-y:auto; border:1px solid var(--border-subtle); border-radius:var(--radius-sm); font-size:0.8rem;">
+            <table style="width:100%; border-collapse:collapse; text-align:left;">
+              <thead style="background:rgba(255,255,255,0.05); color:var(--text-muted); position:sticky; top:0;">
+                <tr>
+                  <th style="padding:8px 10px;">Role</th>
+                  <th style="padding:8px 10px;">Company</th>
+                  <th style="padding:8px 10px;">Match</th>
+                  <th style="padding:8px 10px;">Status</th>
+                </tr>
+              </thead>
+              <tbody style="color:var(--text-main); font-size:0.78rem;">
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                  <td style="padding:8px 10px;">AI / ML Intern</td>
+                  <td style="padding:8px 10px;">Cognitive AI Labs</td>
+                  <td style="padding:8px 10px; color:#34d399;">100%</td>
+                  <td style="padding:8px 10px;"><span style="background:rgba(16,185,129,0.2); color:#34d399; padding:2px 6px; border-radius:4px;">Applied</span></td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                  <td style="padding:8px 10px;">Conversational AI (LEGACY)</td>
+                  <td style="padding:8px 10px;">BharatAI Voice</td>
+                  <td style="padding:8px 10px; color:#34d399;">99%</td>
+                  <td style="padding:8px 10px;"><span style="background:rgba(16,185,129,0.2); color:#34d399; padding:2px 6px; border-radius:4px;">Applied</span></td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                  <td style="padding:8px 10px;">Research Intern</td>
+                  <td style="padding:8px 10px;">TCS Research</td>
+                  <td style="padding:8px 10px; color:#34d399;">100%</td>
+                  <td style="padding:8px 10px;"><span style="background:rgba(16,185,129,0.2); color:#34d399; padding:2px 6px; border-radius:4px;">Applied</span></td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                  <td style="padding:8px 10px;">Python Backend</td>
+                  <td style="padding:8px 10px;">Reliance Jio AI CoE</td>
+                  <td style="padding:8px 10px; color:#34d399;">96%</td>
+                  <td style="padding:8px 10px;"><span style="background:rgba(16,185,129,0.2); color:#34d399; padding:2px 6px; border-radius:4px;">Applied</span></td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                  <td style="padding:8px 10px;">C++ &amp; DSA Intern</td>
+                  <td style="padding:8px 10px;">Aether Dynamics</td>
+                  <td style="padding:8px 10px; color:#34d399;">96%</td>
+                  <td style="padding:8px 10px;"><span style="background:rgba(16,185,129,0.2); color:#34d399; padding:2px 6px; border-radius:4px;">Applied</span></td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                  <td style="padding:8px 10px;">AI &amp; Data Analytics</td>
+                  <td style="padding:8px 10px;">Fractal Analytics</td>
+                  <td style="padding:8px 10px; color:#34d399;">100%</td>
+                  <td style="padding:8px 10px;"><span style="background:rgba(16,185,129,0.2); color:#34d399; padding:2px 6px; border-radius:4px;">Applied</span></td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                  <td style="padding:8px 10px;">Java Software Dev</td>
+                  <td style="padding:8px 10px;">LTIMindtree</td>
+                  <td style="padding:8px 10px; color:#34d399;">93%</td>
+                  <td style="padding:8px 10px;"><span style="background:rgba(16,185,129,0.2); color:#34d399; padding:2px 6px; border-radius:4px;">Applied</span></td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                  <td style="padding:8px 10px;">Autonomous Agents</td>
+                  <td style="padding:8px 10px;">Kreate AI Labs</td>
+                  <td style="padding:8px 10px; color:#34d399;">97%</td>
+                  <td style="padding:8px 10px;"><span style="background:rgba(16,185,129,0.2); color:#34d399; padding:2px 6px; border-radius:4px;">Applied</span></td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                  <td style="padding:8px 10px;">Computer Vision</td>
+                  <td style="padding:8px 10px;">VisionTech Innovations</td>
+                  <td style="padding:8px 10px; color:#34d399;">100%</td>
+                  <td style="padding:8px 10px;"><span style="background:rgba(16,185,129,0.2); color:#34d399; padding:2px 6px; border-radius:4px;">Applied</span></td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                  <td style="padding:8px 10px;">Systems Software</td>
+                  <td style="padding:8px 10px;">Nexis Systems</td>
+                  <td style="padding:8px 10px; color:#34d399;">100%</td>
+                  <td style="padding:8px 10px;"><span style="background:rgba(16,185,129,0.2); color:#34d399; padding:2px 6px; border-radius:4px;">Applied</span></td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                  <td style="padding:8px 10px;">Data Engineering</td>
+                  <td style="padding:8px 10px;">Zepto Technology</td>
+                  <td style="padding:8px 10px; color:#34d399;">100%</td>
+                  <td style="padding:8px 10px;"><span style="background:rgba(16,185,129,0.2); color:#34d399; padding:2px 6px; border-radius:4px;">Applied</span></td>
+                </tr>
+                <tr>
+                  <td style="padding:8px 10px;">Web &amp; Frontend</td>
+                  <td style="padding:8px 10px;">Zenith Studios</td>
+                  <td style="padding:8px 10px; color:#34d399;">91%</td>
+                  <td style="padding:8px 10px;"><span style="background:rgba(16,185,129,0.2); color:#34d399; padding:2px 6px; border-radius:4px;">Applied</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
